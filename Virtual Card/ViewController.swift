@@ -20,7 +20,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     super.viewDidLoad()
     self.title = "Title"
     
-    //CoreDataManager.returnMyBusinessCard()
+    NetworkManager.sharedInstance.saveCardToServer { (returnedObject, returnedString, returnedBool) -> Void? in
+        print("Returned Data: \(returnedObject) with response \(returnedString), and bool \(returnedBool)")
+    }
     
     self.tableView.delegate = self
     self.tableView.dataSource = self
