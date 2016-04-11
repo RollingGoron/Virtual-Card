@@ -1,0 +1,632 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2D1BD9D71CA8628100E95BCE /* CardReviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1BD9D61CA8628100E95BCE /* CardReviewController.swift */; };
+		2D1BD9DA1CA86EB700E95BCE /* SavedEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1BD9D81CA86EB700E95BCE /* SavedEntity+CoreDataProperties.swift */; };
+		2D1BD9DB1CA86EB700E95BCE /* SavedEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1BD9D91CA86EB700E95BCE /* SavedEntity.swift */; };
+		2D4015BE1CA581DA00B41B6A /* SavedCardsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4015BD1CA581DA00B41B6A /* SavedCardsController.swift */; };
+		2D4015C01CA581EA00B41B6A /* CreateNewCardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4015BF1CA581EA00B41B6A /* CreateNewCardController.swift */; };
+		2D4015C21CA581FF00B41B6A /* SendReceiveController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4015C11CA581FF00B41B6A /* SendReceiveController.swift */; };
+		2D4015CF1CA5840500B41B6A /* CardEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4015CD1CA5840500B41B6A /* CardEntity+CoreDataProperties.swift */; };
+		2D4015D01CA5840500B41B6A /* CardEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4015CE1CA5840500B41B6A /* CardEntity.swift */; };
+		2D4015D31CA58A9500B41B6A /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4015D11CA58A9500B41B6A /* HomeCell.swift */; };
+		2D4015D41CA58A9500B41B6A /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D4015D21CA58A9500B41B6A /* HomeCell.xib */; };
+		2DBC3A261CA2282B00EF303B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC3A251CA2282B00EF303B /* AppDelegate.swift */; };
+		2DBC3A281CA2282B00EF303B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC3A271CA2282B00EF303B /* ViewController.swift */; };
+		2DBC3A2B1CA2282B00EF303B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DBC3A291CA2282B00EF303B /* Main.storyboard */; };
+		2DBC3A2E1CA2282B00EF303B /* Virtual_Card.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC3A2C1CA2282B00EF303B /* Virtual_Card.xcdatamodeld */; };
+		2DBC3A301CA2282B00EF303B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DBC3A2F1CA2282B00EF303B /* Assets.xcassets */; };
+		2DBC3A331CA2282B00EF303B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DBC3A311CA2282B00EF303B /* LaunchScreen.storyboard */; };
+		2DBC3A3E1CA2282B00EF303B /* Virtual_CardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC3A3D1CA2282B00EF303B /* Virtual_CardTests.swift */; };
+		2DBC3A491CA2282B00EF303B /* Virtual_CardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC3A481CA2282B00EF303B /* Virtual_CardUITests.swift */; };
+		2DBC3A571CA2289800EF303B /* CommunicationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC3A561CA2289800EF303B /* CommunicationManager.swift */; };
+		2DBC3A591CA228A700EF303B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC3A581CA228A700EF303B /* NetworkManager.swift */; };
+		2DBC3A5B1CA228B600EF303B /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC3A5A1CA228B600EF303B /* CoreDataManager.swift */; };
+		2DBC3A5D1CA2370600EF303B /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC3A5C1CA2370600EF303B /* CardModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2DBC3A3A1CA2282B00EF303B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2DBC3A1A1CA2282B00EF303B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2DBC3A211CA2282B00EF303B;
+			remoteInfo = "Virtual Card";
+		};
+		2DBC3A451CA2282B00EF303B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2DBC3A1A1CA2282B00EF303B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2DBC3A211CA2282B00EF303B;
+			remoteInfo = "Virtual Card";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2D1BD9D61CA8628100E95BCE /* CardReviewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardReviewController.swift; sourceTree = "<group>"; };
+		2D1BD9D81CA86EB700E95BCE /* SavedEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SavedEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2D1BD9D91CA86EB700E95BCE /* SavedEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedEntity.swift; sourceTree = "<group>"; };
+		2D4015BD1CA581DA00B41B6A /* SavedCardsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedCardsController.swift; sourceTree = "<group>"; };
+		2D4015BF1CA581EA00B41B6A /* CreateNewCardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewCardController.swift; sourceTree = "<group>"; };
+		2D4015C11CA581FF00B41B6A /* SendReceiveController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendReceiveController.swift; sourceTree = "<group>"; };
+		2D4015C61CA583E500B41B6A /* Virtual Card-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Virtual Card-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		2D4015CD1CA5840500B41B6A /* CardEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CardEntity+CoreDataProperties.swift"; path = "../CardEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2D4015CE1CA5840500B41B6A /* CardEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardEntity.swift; path = ../CardEntity.swift; sourceTree = "<group>"; };
+		2D4015D11CA58A9500B41B6A /* HomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeCell.swift; path = "Virtual Card/HomeCell.swift"; sourceTree = "<group>"; };
+		2D4015D21CA58A9500B41B6A /* HomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeCell.xib; path = "Virtual Card/HomeCell.xib"; sourceTree = "<group>"; };
+		2DBC3A221CA2282B00EF303B /* Virtual Card.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Virtual Card.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DBC3A251CA2282B00EF303B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2DBC3A271CA2282B00EF303B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2DBC3A2A1CA2282B00EF303B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2DBC3A2D1CA2282B00EF303B /* Virtual_Card.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Virtual_Card.xcdatamodel; sourceTree = "<group>"; };
+		2DBC3A2F1CA2282B00EF303B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2DBC3A321CA2282B00EF303B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2DBC3A341CA2282B00EF303B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DBC3A391CA2282B00EF303B /* Virtual CardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Virtual CardTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DBC3A3D1CA2282B00EF303B /* Virtual_CardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Virtual_CardTests.swift; sourceTree = "<group>"; };
+		2DBC3A3F1CA2282B00EF303B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DBC3A441CA2282B00EF303B /* Virtual CardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Virtual CardUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DBC3A481CA2282B00EF303B /* Virtual_CardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Virtual_CardUITests.swift; sourceTree = "<group>"; };
+		2DBC3A4A1CA2282B00EF303B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DBC3A561CA2289800EF303B /* CommunicationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunicationManager.swift; sourceTree = "<group>"; };
+		2DBC3A581CA228A700EF303B /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		2DBC3A5A1CA228B600EF303B /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		2DBC3A5C1CA2370600EF303B /* CardModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2DBC3A1F1CA2282B00EF303B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DBC3A361CA2282B00EF303B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DBC3A411CA2282B00EF303B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2D4015C31CA5820A00B41B6A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2D4015BF1CA581EA00B41B6A /* CreateNewCardController.swift */,
+				2D4015BD1CA581DA00B41B6A /* SavedCardsController.swift */,
+				2D4015C11CA581FF00B41B6A /* SendReceiveController.swift */,
+				2D1BD9D61CA8628100E95BCE /* CardReviewController.swift */,
+				2DBC3A271CA2282B00EF303B /* ViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		2D4015C41CA5827700B41B6A /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				2DBC3A5A1CA228B600EF303B /* CoreDataManager.swift */,
+				2DBC3A561CA2289800EF303B /* CommunicationManager.swift */,
+				2DBC3A581CA228A700EF303B /* NetworkManager.swift */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		2D4015C51CA5827E00B41B6A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2D1BD9D81CA86EB700E95BCE /* SavedEntity+CoreDataProperties.swift */,
+				2D1BD9D91CA86EB700E95BCE /* SavedEntity.swift */,
+				2D4015CD1CA5840500B41B6A /* CardEntity+CoreDataProperties.swift */,
+				2D4015CE1CA5840500B41B6A /* CardEntity.swift */,
+				2DBC3A5C1CA2370600EF303B /* CardModel.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		2D4015D51CA5AAE500B41B6A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2D4015D11CA58A9500B41B6A /* HomeCell.swift */,
+				2D4015D21CA58A9500B41B6A /* HomeCell.xib */,
+			);
+			name = Cells;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		2DBC3A191CA2282B00EF303B = {
+			isa = PBXGroup;
+			children = (
+				2DBC3A241CA2282B00EF303B /* Virtual Card */,
+				2DBC3A3C1CA2282B00EF303B /* Virtual CardTests */,
+				2DBC3A471CA2282B00EF303B /* Virtual CardUITests */,
+				2DBC3A231CA2282B00EF303B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2DBC3A231CA2282B00EF303B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2DBC3A221CA2282B00EF303B /* Virtual Card.app */,
+				2DBC3A391CA2282B00EF303B /* Virtual CardTests.xctest */,
+				2DBC3A441CA2282B00EF303B /* Virtual CardUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2DBC3A241CA2282B00EF303B /* Virtual Card */ = {
+			isa = PBXGroup;
+			children = (
+				2D4015D51CA5AAE500B41B6A /* Cells */,
+				2D4015C61CA583E500B41B6A /* Virtual Card-Bridging-Header.h */,
+				2DBC3A251CA2282B00EF303B /* AppDelegate.swift */,
+				2D4015C31CA5820A00B41B6A /* Controllers */,
+				2D4015C41CA5827700B41B6A /* Managers */,
+				2D4015C51CA5827E00B41B6A /* Models */,
+				2DBC3A291CA2282B00EF303B /* Main.storyboard */,
+				2DBC3A2F1CA2282B00EF303B /* Assets.xcassets */,
+				2DBC3A311CA2282B00EF303B /* LaunchScreen.storyboard */,
+				2DBC3A341CA2282B00EF303B /* Info.plist */,
+				2DBC3A2C1CA2282B00EF303B /* Virtual_Card.xcdatamodeld */,
+			);
+			path = "Virtual Card";
+			sourceTree = "<group>";
+		};
+		2DBC3A3C1CA2282B00EF303B /* Virtual CardTests */ = {
+			isa = PBXGroup;
+			children = (
+				2DBC3A3D1CA2282B00EF303B /* Virtual_CardTests.swift */,
+				2DBC3A3F1CA2282B00EF303B /* Info.plist */,
+			);
+			path = "Virtual CardTests";
+			sourceTree = "<group>";
+		};
+		2DBC3A471CA2282B00EF303B /* Virtual CardUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2DBC3A481CA2282B00EF303B /* Virtual_CardUITests.swift */,
+				2DBC3A4A1CA2282B00EF303B /* Info.plist */,
+			);
+			path = "Virtual CardUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2DBC3A211CA2282B00EF303B /* Virtual Card */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DBC3A4D1CA2282B00EF303B /* Build configuration list for PBXNativeTarget "Virtual Card" */;
+			buildPhases = (
+				2DBC3A1E1CA2282B00EF303B /* Sources */,
+				2DBC3A1F1CA2282B00EF303B /* Frameworks */,
+				2DBC3A201CA2282B00EF303B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Virtual Card";
+			productName = "Virtual Card";
+			productReference = 2DBC3A221CA2282B00EF303B /* Virtual Card.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2DBC3A381CA2282B00EF303B /* Virtual CardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DBC3A501CA2282B00EF303B /* Build configuration list for PBXNativeTarget "Virtual CardTests" */;
+			buildPhases = (
+				2DBC3A351CA2282B00EF303B /* Sources */,
+				2DBC3A361CA2282B00EF303B /* Frameworks */,
+				2DBC3A371CA2282B00EF303B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2DBC3A3B1CA2282B00EF303B /* PBXTargetDependency */,
+			);
+			name = "Virtual CardTests";
+			productName = "Virtual CardTests";
+			productReference = 2DBC3A391CA2282B00EF303B /* Virtual CardTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2DBC3A431CA2282B00EF303B /* Virtual CardUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DBC3A531CA2282B00EF303B /* Build configuration list for PBXNativeTarget "Virtual CardUITests" */;
+			buildPhases = (
+				2DBC3A401CA2282B00EF303B /* Sources */,
+				2DBC3A411CA2282B00EF303B /* Frameworks */,
+				2DBC3A421CA2282B00EF303B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2DBC3A461CA2282B00EF303B /* PBXTargetDependency */,
+			);
+			name = "Virtual CardUITests";
+			productName = "Virtual CardUITests";
+			productReference = 2DBC3A441CA2282B00EF303B /* Virtual CardUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2DBC3A1A1CA2282B00EF303B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Peter Gosling";
+				TargetAttributes = {
+					2DBC3A211CA2282B00EF303B = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = JDJ67K33AE;
+					};
+					2DBC3A381CA2282B00EF303B = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 2DBC3A211CA2282B00EF303B;
+					};
+					2DBC3A431CA2282B00EF303B = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 2DBC3A211CA2282B00EF303B;
+					};
+				};
+			};
+			buildConfigurationList = 2DBC3A1D1CA2282B00EF303B /* Build configuration list for PBXProject "Virtual Card" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2DBC3A191CA2282B00EF303B;
+			productRefGroup = 2DBC3A231CA2282B00EF303B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2DBC3A211CA2282B00EF303B /* Virtual Card */,
+				2DBC3A381CA2282B00EF303B /* Virtual CardTests */,
+				2DBC3A431CA2282B00EF303B /* Virtual CardUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2DBC3A201CA2282B00EF303B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DBC3A331CA2282B00EF303B /* LaunchScreen.storyboard in Resources */,
+				2DBC3A301CA2282B00EF303B /* Assets.xcassets in Resources */,
+				2D4015D41CA58A9500B41B6A /* HomeCell.xib in Resources */,
+				2DBC3A2B1CA2282B00EF303B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DBC3A371CA2282B00EF303B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DBC3A421CA2282B00EF303B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2DBC3A1E1CA2282B00EF303B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DBC3A5B1CA228B600EF303B /* CoreDataManager.swift in Sources */,
+				2D4015C21CA581FF00B41B6A /* SendReceiveController.swift in Sources */,
+				2D4015BE1CA581DA00B41B6A /* SavedCardsController.swift in Sources */,
+				2DBC3A281CA2282B00EF303B /* ViewController.swift in Sources */,
+				2D4015C01CA581EA00B41B6A /* CreateNewCardController.swift in Sources */,
+				2DBC3A261CA2282B00EF303B /* AppDelegate.swift in Sources */,
+				2D4015D31CA58A9500B41B6A /* HomeCell.swift in Sources */,
+				2D1BD9DA1CA86EB700E95BCE /* SavedEntity+CoreDataProperties.swift in Sources */,
+				2DBC3A5D1CA2370600EF303B /* CardModel.swift in Sources */,
+				2DBC3A591CA228A700EF303B /* NetworkManager.swift in Sources */,
+				2DBC3A571CA2289800EF303B /* CommunicationManager.swift in Sources */,
+				2D4015CF1CA5840500B41B6A /* CardEntity+CoreDataProperties.swift in Sources */,
+				2D1BD9DB1CA86EB700E95BCE /* SavedEntity.swift in Sources */,
+				2D4015D01CA5840500B41B6A /* CardEntity.swift in Sources */,
+				2DBC3A2E1CA2282B00EF303B /* Virtual_Card.xcdatamodeld in Sources */,
+				2D1BD9D71CA8628100E95BCE /* CardReviewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DBC3A351CA2282B00EF303B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DBC3A3E1CA2282B00EF303B /* Virtual_CardTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DBC3A401CA2282B00EF303B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DBC3A491CA2282B00EF303B /* Virtual_CardUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2DBC3A3B1CA2282B00EF303B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2DBC3A211CA2282B00EF303B /* Virtual Card */;
+			targetProxy = 2DBC3A3A1CA2282B00EF303B /* PBXContainerItemProxy */;
+		};
+		2DBC3A461CA2282B00EF303B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2DBC3A211CA2282B00EF303B /* Virtual Card */;
+			targetProxy = 2DBC3A451CA2282B00EF303B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2DBC3A291CA2282B00EF303B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2DBC3A2A1CA2282B00EF303B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2DBC3A311CA2282B00EF303B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2DBC3A321CA2282B00EF303B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2DBC3A4B1CA2282B00EF303B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2DBC3A4C1CA2282B00EF303B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2DBC3A4E1CA2282B00EF303B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "Virtual Card/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pearlbit.Virtual-Card";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Virtual Card-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2DBC3A4F1CA2282B00EF303B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "Virtual Card/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pearlbit.Virtual-Card";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Virtual Card-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		2DBC3A511CA2282B00EF303B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Virtual CardTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pearlbit.Virtual-CardTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Virtual Card.app/Virtual Card";
+			};
+			name = Debug;
+		};
+		2DBC3A521CA2282B00EF303B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Virtual CardTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pearlbit.Virtual-CardTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Virtual Card.app/Virtual Card";
+			};
+			name = Release;
+		};
+		2DBC3A541CA2282B00EF303B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Virtual CardUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pearlbit.Virtual-CardUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Virtual Card";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		2DBC3A551CA2282B00EF303B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Virtual CardUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pearlbit.Virtual-CardUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Virtual Card";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2DBC3A1D1CA2282B00EF303B /* Build configuration list for PBXProject "Virtual Card" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DBC3A4B1CA2282B00EF303B /* Debug */,
+				2DBC3A4C1CA2282B00EF303B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2DBC3A4D1CA2282B00EF303B /* Build configuration list for PBXNativeTarget "Virtual Card" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DBC3A4E1CA2282B00EF303B /* Debug */,
+				2DBC3A4F1CA2282B00EF303B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2DBC3A501CA2282B00EF303B /* Build configuration list for PBXNativeTarget "Virtual CardTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DBC3A511CA2282B00EF303B /* Debug */,
+				2DBC3A521CA2282B00EF303B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2DBC3A531CA2282B00EF303B /* Build configuration list for PBXNativeTarget "Virtual CardUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DBC3A541CA2282B00EF303B /* Debug */,
+				2DBC3A551CA2282B00EF303B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2DBC3A2C1CA2282B00EF303B /* Virtual_Card.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2DBC3A2D1CA2282B00EF303B /* Virtual_Card.xcdatamodel */,
+			);
+			currentVersion = 2DBC3A2D1CA2282B00EF303B /* Virtual_Card.xcdatamodel */;
+			path = Virtual_Card.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2DBC3A1A1CA2282B00EF303B /* Project object */;
+}
