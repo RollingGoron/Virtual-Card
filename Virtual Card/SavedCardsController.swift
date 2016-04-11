@@ -26,7 +26,10 @@ class SavedCardsController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
+}
+
+extension SavedCardsController : UITableViewDataSource, UITableViewDelegate {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableData.count
     }
@@ -45,5 +48,4 @@ class SavedCardsController: UIViewController {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
     }
-
 }

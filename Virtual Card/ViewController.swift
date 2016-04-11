@@ -18,16 +18,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    self.title = "Title"
-    
-    NetworkManager.sharedInstance.saveCardToServer { (returnedObject, returnedString, returnedBool) -> Void? in
-        print("Returned Data: \(returnedObject) with response \(returnedString), and bool \(returnedBool)")
-    }
-    
+    self.title = "Title"    
     self.tableView.delegate = self
     self.tableView.dataSource = self
     self.tableView.tableFooterView = UIView(frame: CGRect.zero)
     self.tableView.registerNib(UINib(nibName: "HomeCell", bundle: nil), forCellReuseIdentifier: "HomeCell")
+    
+    CoreDataManager.returnAllSavedCards()
     
     // Do any additional setup after loading the view, typically from a nib.
   }

@@ -40,14 +40,13 @@ class NetworkManager: NSObject {
         
     }
     
-    func saveCardToServer(networkCompletionBlock : NetworkCompletionBlock) -> Void {
+    func saveCardToServer(firstName  : String, lastName : String, company : String, jobTitle : String, networkCompletionBlock : NetworkCompletionBlock) -> Void {
         
-        let jsonDictionary = ["userId": "peter1", "fName" : "Peter", "sName" : "Gosling", "phone" : "555666666"]
+        let jsonDictionary = ["userId": firstName+"1", "fName" : firstName, "sName" : lastName, "companyName" : company]
         
         
         do {
             let jsonData = try NSJSONSerialization.dataWithJSONObject(jsonDictionary, options: .PrettyPrinted)
-            
             let saveRequest = NSMutableURLRequest(URL: NSURL(string: "http://businesscardhackathon.gbsfr7dipy.us-west-2.elasticbeanstalk.com/businessCard")!)
             saveRequest.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
             saveRequest.HTTPMethod = "POST"
@@ -63,7 +62,9 @@ class NetworkManager: NSObject {
         
     }
     
-    func fetchAllCardsForAccount() -> Void{
+    func fetchAllCardsForAccount() -> Void {
+        
+        
         
     }
     

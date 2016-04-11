@@ -102,17 +102,18 @@ class CoreDataManager: NSObject {
     class func returnAllSavedCards()-> NSArray {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let managedObjectContext = appDelegate.managedObjectContext
-        let fetchRequest = NSFetchRequest(entityName: "CardEntity")
+        let fetchRequest = NSFetchRequest(entityName: "SavedEntity")
         
         do {
             let fetchResults = try managedObjectContext.executeFetchRequest(fetchRequest)
-            let savedCard = fetchResults as NSArray
+            let savedCards = fetchResults as NSArray
             //        if savedCard.count > 0 {
             //            let myCard = savedCard[0]
             //            print("Fetched Results! \(myCard.firstName)")
             //            print(myCard)
             //        }
-            return savedCard
+            print("Saved Cards \(savedCards)")
+            return savedCards
             
         } catch {
             print("Error fetching saved card!")
