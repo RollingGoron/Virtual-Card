@@ -9,63 +9,70 @@
 import Foundation
 
 struct CardModel : Equatable {
-  var cardFirstName : String = ""
-  var cardLastName : String = ""
-  var cardJobTitle : String = ""
-  var cardCompany : String = ""
-  
-  init(cardFirstName : String, cardLastName : String, cardJobTitle : String, cardCompany : String) {
-    self.cardFirstName = cardFirstName
-    self.cardLastName = cardLastName
-    self.cardJobTitle = cardJobTitle
-    self.cardCompany = cardCompany
-  }
-  
-  init(dataModel : Dictionary<String, AnyObject>) {
-    self.cardFirstName = dataModel["cardFirstName"] as! String
-    self.cardLastName = dataModel["cardLastName"] as! String
-    self.cardJobTitle = dataModel["cardJobTitle"] as! String
-    self.cardCompany = dataModel["cardCompany"] as! String
+    var cardFirstName : String = ""
+    var cardLastName : String = ""
+    var cardJobTitle : String = ""
+    var cardCompany : String = ""
     
-  }
-  
-  init(cardEntity : CardEntity) {
-    self.cardFirstName = cardEntity.firstName! as String
-    self.cardLastName = cardEntity.lastName! as String
-    self.cardCompany = cardEntity.company! as String
-    self.cardJobTitle = cardEntity.jobTitle! as String
-  }
-  
-  init(savedEntity : SavedEntity) {
-    self.cardFirstName = savedEntity.firstName! as String
-    self.cardLastName = savedEntity.lastName! as String
-    self.cardCompany = savedEntity.company! as String
-    self.cardJobTitle = savedEntity.jobTitle! as String
-  }
-  
+    init(cardFirstName : String, cardLastName : String, cardJobTitle : String, cardCompany : String) {
+        self.cardFirstName = cardFirstName
+        self.cardLastName = cardLastName
+        self.cardJobTitle = cardJobTitle
+        self.cardCompany = cardCompany
+    }
+    
+    init(dataModel : Dictionary<String, AnyObject>) {
+        self.cardFirstName = dataModel["cardFirstName"] as! String
+        self.cardLastName = dataModel["cardLastName"] as! String
+        self.cardJobTitle = dataModel["cardJobTitle"] as! String
+        self.cardCompany = dataModel["cardCompany"] as! String
+        
+    }
+    
+    init(cardEntity : CardEntity) {
+        self.cardFirstName = cardEntity.firstName! as String
+        self.cardLastName = cardEntity.lastName! as String
+        self.cardCompany = cardEntity.company! as String
+        self.cardJobTitle = cardEntity.jobTitle! as String
+    }
+    
+    init(savedEntity : SavedEntity) {
+        self.cardFirstName = savedEntity.firstName! as String
+        self.cardLastName = savedEntity.lastName! as String
+        self.cardCompany = savedEntity.company! as String
+        self.cardJobTitle = savedEntity.jobTitle! as String
+    }
+    
+    init(fetchedDictionary : [String : String]) {
+        self.cardFirstName = fetchedDictionary["fName"]! as String
+        self.cardLastName = fetchedDictionary["sName"]! as String
+        self.cardCompany = fetchedDictionary["companyName"]! as String
+        self.cardJobTitle = fetchedDictionary["designation"]! as String
+    }
+    
 }
 
 func modelToData(cardModel : CardModel) -> NSData? {
-  
-  let modelDictionary = ["cardFirstName" : cardModel.cardFirstName, "cardLastName" : cardModel.cardLastName, "cardJobTitle" : cardModel.cardJobTitle, "cardCompany" : cardModel.cardCompany]
-  
-  do {
     
-    let modelData : NSData = try NSJSONSerialization.dataWithJSONObject(modelDictionary, options: .PrettyPrinted)
-    return modelData
+    let modelDictionary = ["cardFirstName" : cardModel.cardFirstName, "cardLastName" : cardModel.cardLastName, "cardJobTitle" : cardModel.cardJobTitle, "cardCompany" : cardModel.cardCompany]
     
-  } catch {
-    print("An error occured converting data")
-    return nil
-  }
+    do {
+        
+        let modelData : NSData = try NSJSONSerialization.dataWithJSONObject(modelDictionary, options: .PrettyPrinted)
+        return modelData
+        
+    } catch {
+        print("An error occured converting data")
+        return nil
+    }
 }
 
 func == (lhs : CardModel, rhs : CardModel) -> Bool {
-  
-  if lhs.cardCompany == rhs.cardCompany && lhs.cardFirstName == rhs.cardFirstName && lhs.cardLastName == rhs.cardLastName && lhs.cardJobTitle == rhs.cardJobTitle {
-    return true
-  } else {
-    return false
-  }
-  
+    
+    if lhs.cardCompany == rhs.cardCompany && lhs.cardFirstName == rhs.cardFirstName && lhs.cardLastName == rhs.cardLastName && lhs.cardJobTitle == rhs.cardJobTitle {
+        return true
+    } else {
+        return false
+    }
+    
 }

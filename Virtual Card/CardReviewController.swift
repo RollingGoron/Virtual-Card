@@ -14,31 +14,51 @@ protocol TaskCompletedProtocol:class
 }
 
 class CardReviewController: UIViewController {
-    @IBOutlet weak var firstNameLabel: UILabel!
-    @IBOutlet weak var lastNameLabel: UILabel!
-    @IBOutlet weak var jobTitleLabel: UILabel!
-    @IBOutlet weak var companyLabel: UILabel!
+  
+  @IBOutlet weak var firstNameLabel: UILabel!
+  @IBOutlet weak var lastNameLabel: UILabel!
+  @IBOutlet weak var jobTitleLabel: UILabel!
+  @IBOutlet weak var companyLabel: UILabel!
+  
+  weak var delegate: TaskCompletedProtocol?
+  
+  var cardModel : CardModel!
+  var cardSaved: Bool!
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    self.title = "Title"
     
-    var cardModel : CardModel!
-    var cardSaved: Bool!
+    let cancelButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: "cancelClicked")
+    navigationItem.leftBarButtonItem = cancelButton
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        firstNameLabel.text = cardModel.cardFirstName
-        lastNameLabel.text = cardModel.cardLastName
-        jobTitleLabel.text = cardModel.cardJobTitle
-        companyLabel.text = cardModel.cardCompany
-        
-        // Do any additional setup after loading the view.
-    }
+    firstNameLabel.text = cardModel.cardFirstName
+    lastNameLabel.text = cardModel.cardLastName
+    jobTitleLabel.text = cardModel.cardJobTitle
+    companyLabel.text = cardModel.cardCompany
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    // Do any additional setup after loading the view.
+  }
+  
+  func cancelClicked(){
+    dismissViewControllerAnimated(true) { () -> Void in
+      
+    };
+  }
+  
+  override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+    // Dispose of any resources that can be recreated.
+  }
+  
+  @IBAction func dismissController(sender: AnyObject) {
+    let isSaved = CoreDataManager.saveMyCardToCoreData(self.cardModel)! as Bool
     
-    @IBAction func dismissController(sender: AnyObject) {
+        if isSaved {
+            self.delegate!.saveButtonClicked()
+            dismissViewControllerAnimated(false) { () -> Void in
+            }
+        }
         
         self.navigationController?.popViewControllerAnimated(true)
         

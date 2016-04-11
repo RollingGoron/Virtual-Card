@@ -23,9 +23,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     self.tableView.dataSource = self
     self.tableView.tableFooterView = UIView(frame: CGRect.zero)
     self.tableView.registerNib(UINib(nibName: "HomeCell", bundle: nil), forCellReuseIdentifier: "HomeCell")
-    
-    CoreDataManager.returnAllSavedCards()
-    
+        
     // Do any additional setup after loading the view, typically from a nib.
   }
   

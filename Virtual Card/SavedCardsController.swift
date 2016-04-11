@@ -14,11 +14,27 @@ class SavedCardsController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Title"
-        tableData = CoreDataManager.returnAllSavedCards()
-        savedCardsTableView.reloadData()
-        self.savedCardsTableView.registerNib(UINib(nibName: "HomeCell", bundle: nil), forCellReuseIdentifier: "HomeCell")
-        self.savedCardsTableView.rowHeight = 45
         
+        tableData = CoreDataManager.returnAllSavedCards()
+        
+        savedCardsTableView.reloadData()
+        self.savedCardsTableView.registerNib(UINib(nibName: "SavedCell", bundle: nil), forCellReuseIdentifier: "SavedCell")
+        self.savedCardsTableView.rowHeight = 87
+        self.savedCardsTableView.estimatedRowHeight = UITableViewAutomaticDimension
+        
+//        NetworkManager.sharedInstance.fetchAllCardsForAccount { (returnedObject, returnedString, returnedBool) -> Void in
+//            
+//            guard let returnedCardsArray = returnedObject["busiunessCards"] as? [Dictionary<String, String>] else {
+//                return
+//            }
+//            for (var i = 0; i < returnedCardsArray.count; i++) {
+//                print(returnedCardsArray[i])
+//                
+//                CoreDataManager.saveReceivedCardToCoreData(CardModel(fetchedDictionary: returnedCardsArray[i]))
+//            }
+//            
+//        }
+
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -36,10 +52,14 @@ extension SavedCardsController : UITableViewDataSource, UITableViewDelegate {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("HomeCell") as! HomeCell
-        let myCard = tableData[indexPath.row] as! CardEntity
-        let aStr = String(format: "  %@  %@", myCard.firstName!,myCard.lastName!)
-        cell.tableLabel.text = aStr
+        let savedEntity = tableData[indexPath.row] as! SavedEntity
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("SavedCell") as! SavedCell
+        
+        cell.firstNameLabel.text = savedEntity.firstName
+        cell.lastNameLabel.text = savedEntity.lastName
+        cell.jobTitleLabel.text = savedEntity.jobTitle
+        cell.companyTitle.text = savedEntity.company
         
         return cell
         
