@@ -1,4 +1,4 @@
-//  
+//
 //  SavedCardsController.swift
 //  Virtual Card
 //
@@ -22,19 +22,23 @@ class SavedCardsController: UIViewController {
         self.savedCardsTableView.rowHeight = 87
         self.savedCardsTableView.estimatedRowHeight = UITableViewAutomaticDimension
         
-//        NetworkManager.sharedInstance.fetchAllCardsForAccount { (returnedObject, returnedString, returnedBool) -> Void in
-//            
-//            guard let returnedCardsArray = returnedObject["busiunessCards"] as? [Dictionary<String, String>] else {
-//                return
-//            }
-//            for (var i = 0; i < returnedCardsArray.count; i++) {
-//                print(returnedCardsArray[i])
-//                
-//                CoreDataManager.saveReceivedCardToCoreData(CardModel(fetchedDictionary: returnedCardsArray[i]))
-//            }
-//            
-//        }
-
+        NetworkManager.sharedInstance.fetchAllCardsForAccount { (returnedObject, returnedString, returnedBool) -> Void in
+            
+            guard let returnedCardsArray = returnedObject["busiunessCards"] as? [Dictionary<String, String>] else {
+                return
+            }
+            
+            if returnedCardsArray.count != self.tableData.count { // Check if new cards have been added.
+                
+                for (var i = 0; i < returnedCardsArray.count; i++) {
+                    print(returnedCardsArray[i])
+                    
+                    CoreDataManager.saveReceivedCardToCoreData(CardModel(fetchedDictionary: returnedCardsArray[i]))
+                }
+            }
+            
+        }
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -42,7 +46,7 @@ class SavedCardsController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
 }
 
 extension SavedCardsController : UITableViewDataSource, UITableViewDelegate {
