@@ -40,6 +40,7 @@ class CreateNewCardController: UIViewController {
       let alertController = UIAlertController(title: "Sorry!", message: "Please fill out all fields", preferredStyle: .Alert)
       let defaultAction = UIAlertAction(title: "Okay", style: .Default, handler: nil)
       alertController.addAction(defaultAction)
+      
       self.presentViewController(alertController, animated: true, completion: nil)
       
     } else {
