@@ -15,10 +15,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   let tableData = ["Create new OPEN Business Card", "Saved Business Cards", "Send/Receive OPEN Business Card"]
   let cardData = CardModel(cardFirstName: "Bob", cardLastName: "Sacamano", cardJobTitle: "Accountant", cardCompany: "Target")
   
-
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    self.title = "Title"
     
     //CoreDataManager.returnMyBusinessCard()
     
@@ -29,7 +28,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // Do any additional setup after loading the view, typically from a nib.
   }
-
+  
+  override func viewWillAppear(animated: Bool) {
+    self.title = "Title"
+  }
+  
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
@@ -55,13 +58,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
       let createCardController = self.storyboard?.instantiateViewControllerWithIdentifier("CreateNewCardController")
       self.navigationController?.pushViewController(createCardController!, animated: true)
     }else if indexPath.row == 1 {
-        let savedCardsController = self.storyboard?.instantiateViewControllerWithIdentifier("SavedCardsController")
-        self.navigationController?.pushViewController(savedCardsController!, animated: true)
+      let savedCardsController = self.storyboard?.instantiateViewControllerWithIdentifier("SavedCardsController")
+      self.navigationController?.pushViewController(savedCardsController!, animated: true)
     } else if indexPath.row == 2 {
       let sendReceiveCardController = self.storyboard?.instantiateViewControllerWithIdentifier("SendReceiveController")
       self.navigationController?.pushViewController(sendReceiveCardController!, animated: true)
     }
     self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
   }
-
+  
 }

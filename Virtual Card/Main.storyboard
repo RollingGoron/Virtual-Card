@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GwY-ro-gMm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GwY-ro-gMm">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -111,22 +111,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kNb-N9-fLo">
-                                <rect key="frame" x="20" y="41" width="560" height="30"/>
+                                <rect key="frame" x="20" y="60" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v6e-3r-9n4">
-                                <rect key="frame" x="20" y="86" width="560" height="30"/>
+                                <rect key="frame" x="20" y="105" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Job Title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AXH-cP-x1N">
-                                <rect key="frame" x="20" y="180" width="560" height="30"/>
+                                <rect key="frame" x="20" y="199" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MXY-VX-DBe">
-                                <rect key="frame" x="20" y="258" width="560" height="35"/>
+                                <rect key="frame" x="20" y="277" width="560" height="35"/>
                                 <color key="backgroundColor" red="0.074509803920000006" green="0.57647058819999997" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="9ax-aT-ILC"/>
@@ -139,7 +139,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Company" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UHR-tH-vaf">
-                                <rect key="frame" x="20" y="133" width="560" height="30"/>
+                                <rect key="frame" x="20" y="152" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
@@ -150,7 +150,7 @@
                             <constraint firstItem="AXH-cP-x1N" firstAttribute="leading" secondItem="iFj-S6-PDg" secondAttribute="leadingMargin" id="6T8-Qi-77p"/>
                             <constraint firstItem="UHR-tH-vaf" firstAttribute="trailing" secondItem="AXH-cP-x1N" secondAttribute="trailing" id="8No-hA-ykn"/>
                             <constraint firstItem="v6e-3r-9n4" firstAttribute="leading" secondItem="kNb-N9-fLo" secondAttribute="leading" id="QCr-CG-Ddd"/>
-                            <constraint firstItem="kNb-N9-fLo" firstAttribute="top" secondItem="pGC-7r-AhU" secondAttribute="bottom" constant="21" id="YLC-El-FTc"/>
+                            <constraint firstItem="kNb-N9-fLo" firstAttribute="top" secondItem="pGC-7r-AhU" secondAttribute="bottom" constant="40" id="YLC-El-FTc"/>
                             <constraint firstItem="AXH-cP-x1N" firstAttribute="leading" secondItem="UHR-tH-vaf" secondAttribute="leading" id="YeD-8h-dtf"/>
                             <constraint firstItem="UHR-tH-vaf" firstAttribute="top" secondItem="v6e-3r-9n4" secondAttribute="bottom" constant="17" id="dBx-FO-YV1"/>
                             <constraint firstItem="UHR-tH-vaf" firstAttribute="trailing" secondItem="iFj-S6-PDg" secondAttribute="trailingMargin" id="eZc-Sl-CB8"/>
@@ -176,6 +176,26 @@
             </objects>
             <point key="canvasLocation" x="1956" y="323"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="HJw-dK-9L6">
+            <objects>
+                <navigationController storyboardIdentifier="CardReviewNavigation" id="ogy-yP-a7t" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ieD-xk-izl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.0" green="0.14901960784313725" blue="0.38823529411764707" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="4Ix-pn-Otf" kind="relationship" relationship="rootViewController" id="Z7g-bU-AGF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gf1-l4-5lD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3249" y="323"/>
+        </scene>
         <!--Card Review Controller-->
         <scene sceneID="or4-Jn-baO">
             <objects>
@@ -188,7 +208,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="am2-HW-eib">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="am2-HW-eib">
                                 <rect key="frame" x="20" y="108" width="560" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="pBY-Tx-imu"/>
@@ -197,7 +217,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bcr-QJ-EIn">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bcr-QJ-EIn">
                                 <rect key="frame" x="20" y="149" width="560" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="7A5-Bm-qcW"/>
@@ -206,7 +226,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ypg-nk-D8Z">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ypg-nk-D8Z">
                                 <rect key="frame" x="20" y="193" width="560" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="8P8-wT-986"/>
@@ -215,7 +235,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2kb-g9-iaN">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2kb-g9-iaN">
                                 <rect key="frame" x="20" y="236" width="560" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Gzg-mQ-AwJ"/>
@@ -224,7 +244,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AdK-73-zb7">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AdK-73-zb7">
                                 <rect key="frame" x="20" y="300" width="560" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="560" id="ayY-XT-8di"/>
@@ -253,6 +273,9 @@
                             <constraint firstItem="am2-HW-eib" firstAttribute="leading" secondItem="bcr-QJ-EIn" secondAttribute="leading" id="tO2-nJ-ueZ"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="9Z3-SG-L4c">
+                        <barButtonItem key="backBarButtonItem" title="back" style="plain" systemItem="cancel" id="pxG-ZT-JHO"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="companyLabel" destination="2kb-g9-iaN" id="Pjq-dU-Icg"/>
                         <outlet property="firstNameLabel" destination="am2-HW-eib" id="V3X-5v-AsU"/>
@@ -262,7 +285,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gMN-cy-ex9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3239" y="323"/>
+            <point key="canvasLocation" x="3897" y="323"/>
         </scene>
         <!--Saved Cards Controller-->
         <scene sceneID="iNt-13-Z8d">
