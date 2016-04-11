@@ -8,6 +8,11 @@
 
 import UIKit
 
+protocol TaskCompletedProtocol:class
+{
+  func saveButtonClicked()
+}
+
 class CardReviewController: UIViewController {
     @IBOutlet weak var firstNameLabel: UILabel!
     @IBOutlet weak var lastNameLabel: UILabel!
