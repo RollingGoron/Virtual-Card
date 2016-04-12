@@ -2,7 +2,7 @@
 //  CardDetailViewController.swift
 //  Virtual Card
 //
-//  Created by Srinivas Mamidishetty on 4/12/16.
+//  Created by Manasa Reddy on 4/12/16.
 //  Copyright © 2016 Peter Gosling. All rights reserved.
 //
 
