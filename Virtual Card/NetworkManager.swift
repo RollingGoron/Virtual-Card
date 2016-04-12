@@ -47,6 +47,7 @@ class NetworkManager: NSObject {
         
         do {
             let jsonData = try NSJSONSerialization.dataWithJSONObject(jsonDictionary, options: .PrettyPrinted)
+            
             let saveRequest = NSMutableURLRequest(URL: NSURL(string: "http://businesscardhackathon.gbsfr7dipy.us-west-2.elasticbeanstalk.com/businessCard")!)
             saveRequest.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
             saveRequest.HTTPMethod = "POST"
