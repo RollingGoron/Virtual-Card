@@ -22,40 +22,34 @@ class SavedCardsController: UIViewController {
         self.savedCardsTableView.rowHeight = 87
         self.savedCardsTableView.estimatedRowHeight = UITableViewAutomaticDimension
         
-        NetworkManager.sharedInstance.fetchAllCardsForAccount { (returnedObject, returnedString, returnedBool) -> Void in
-            
-            guard let returnedCardsArray = returnedObject["busiunessCards"] as? [Dictionary<String, String>] else {
-                return
-            }
-            
-            if returnedCardsArray.count != self.tableData.count { // Check if new cards have been added.
-                
-                for (var i = 0; i < returnedCardsArray.count; i++) {
-                    print(returnedCardsArray[i])
-                    CoreDataManager.saveReceivedCardToCoreData(CardModel(fetchedDictionary: returnedCardsArray[i]))
-                }
-                self.tableData = CoreDataManager.returnAllSavedCards()
-                dispatch_async(dispatch_get_main_queue(), {
-                    self.savedCardsTableView.reloadData()
-                })
-            }
-            
+        for (var i = 0; i < returnedCardsArray.count; i++) {
+          print(returnedCardsArray[i])
+          CoreDataManager.saveReceivedCardToCoreData(CardModel(fetchedDictionary: returnedCardsArray[i]))
         }
-        
-        // Do any additional setup after loading the view, typically from a nib.
+        self.tableData = CoreDataManager.returnAllSavedCards()
+        dispatch_async(dispatch_get_main_queue(), {
+          self.savedCardsTableView.reloadData()
+        })
+      }
+      
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+    // Do any additional setup after loading the view, typically from a nib.
+  }
+  
+  override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+    // Dispose of any resources that can be recreated.
+  }
+  
 }
 
 extension SavedCardsController : UITableViewDataSource, UITableViewDelegate {
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tableData.count
-    }
+  func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return tableData.count
+  }
+  
+  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
