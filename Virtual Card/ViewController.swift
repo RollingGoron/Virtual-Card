@@ -27,7 +27,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   }
   
   override func viewWillAppear(animated: Bool) {
-    self.title = "OPEN Virtual Business Card"
+    self.title = "OPEN Business Card"
     if CoreDataManager.returnMyBusinessCard() == nil {
       tableData = ["Create new Business Card", "View My Network", "Exchange Business Cards"]
     } else {
