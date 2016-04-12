@@ -72,9 +72,13 @@ class NetworkManager: NSObject {
         
     }
     
-    func deleteCardFromAccount(cardModel : CardModel) {
-        let deleteReuqest = NSMutableURLRequest(URL: NSURL(string: "http://businesscardhackathon.gbsfr7dipy.us-west-2.elasticbeanstalk.com/businessCard?user")!)
+    func deleteCardFromAccount(savedModel : SavedEntity, networkCompletionBlock : NetworkCompletionBlock) {
+        print(savedModel.userID)
+        let deleteReuqest = NSMutableURLRequest(URL: NSURL(string: "http://businesscardhackathon.gbsfr7dipy.us-west-2.elasticbeanstalk.com/businessCard?user=\(savedModel.userID!)")!)
         deleteReuqest.HTTPMethod = "DELETE"
+        sendAPI(deleteReuqest) { (returnedObject, returnedString, returnedBool) -> Void? in
+            networkCompletionBlock(returnedObject, returnedString, returnedBool)
+        }
         
         
     }

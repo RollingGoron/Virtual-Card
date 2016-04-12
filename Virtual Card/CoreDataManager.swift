@@ -84,19 +84,41 @@ class CoreDataManager: NSObject {
         
     }
     
-    class func returnAllSavedCards()-> NSArray {
+    class func returnAllSavedCards()-> NSMutableArray {
+        
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let managedObjectContext = appDelegate.managedObjectContext
         let fetchRequest = NSFetchRequest(entityName: "SavedEntity")
+        
+        let returnedArray : NSMutableArray = []
+        
         do {
             let fetchResults = try managedObjectContext.executeFetchRequest(fetchRequest)
             let savedCards = fetchResults as NSArray
-            print("Saved Cards \(savedCards)")
-            return savedCards
+            
+            returnedArray.addObjectsFromArray(savedCards as! [SavedEntity])
+            
+            return returnedArray
             
         } catch {
             print("Error fetching saved card!")
-            return NSArray();
+            return NSMutableArray()
         }
     }
+    
+    class func removeSavedItemFromCoreData(savedEntity : SavedEntity) {
+        
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedObjectContext = appDelegate.managedObjectContext
+        managedObjectContext.deleteObject(savedEntity)
+        do {
+            try managedObjectContext.save()
+        } catch let error as NSError {
+            "An error occured when deleting: \(error)"
+        }
+       
+        
+        
+    }
+
 }
