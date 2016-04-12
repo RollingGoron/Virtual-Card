@@ -20,6 +20,7 @@ class CardDetailViewController: UIViewController {
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var imgView:UIImageView!
   
+  
     var cardModel : CardModel!
 
     override func viewDidLoad() {
