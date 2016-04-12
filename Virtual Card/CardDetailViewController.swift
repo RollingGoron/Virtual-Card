@@ -19,7 +19,7 @@ class CardDetailViewController: UIViewController {
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var bgView: UIView!
     
-    var cardModel : SavedEntity!
+    var cardModel : CardModel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,13 +28,13 @@ class CardDetailViewController: UIViewController {
         bgView.layer.borderColor = UIColor.lightGrayColor().CGColor
         bgView.layer.borderWidth = 1
         
-        let aStr = String(format: "%@ %@", cardModel.firstName!,cardModel.lastName!)
+        let aStr = String(format: "%@ %@", cardModel.cardFirstName,cardModel.cardLastName)
         nameLabel.text = aStr
-        jobTitleLabel.text = cardModel.jobTitle
-        companyLabel.text = cardModel.company
-        phoneNoLabel.text = cardModel.phoneNumber
-        emailLabel.text = cardModel.email
-        addressLabel.text = cardModel.address
+        jobTitleLabel.text = cardModel.cardJobTitle
+        companyLabel.text = cardModel.cardCompany
+        phoneNoLabel.text = cardModel.cardPhoneNumber
+        emailLabel.text = cardModel.cardEmail
+        addressLabel.text = cardModel.cardAddress
 
         // Do any additional setup after loading the view.
     }
@@ -45,14 +45,5 @@ class CardDetailViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
