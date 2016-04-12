@@ -36,6 +36,7 @@ class CardDetailViewController: UIViewController {
         emailLabel.text = cardModel.cardEmail
         addressLabel.text = cardModel.cardAddress
 
+      
         // Do any additional setup after loading the view.
     }
 
