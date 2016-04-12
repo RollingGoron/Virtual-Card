@@ -61,26 +61,27 @@ class CardReviewController: UIViewController {
   @IBAction func dismissController(sender: AnyObject) {
     let isSaved = CoreDataManager.saveMyCardToCoreData(self.cardModel)! as Bool
     
-    if isSaved {
-      self.delegate!.saveButtonClicked()
-      dismissViewControllerAnimated(false) { () -> Void in
-      }
+        if isSaved {
+            self.delegate!.saveButtonClicked()
+            dismissViewControllerAnimated(false) { () -> Void in
+            }
+        }
+        
+        self.navigationController?.popViewControllerAnimated(true)
+        
+        dismissViewControllerAnimated(true) { () -> Void in
+            
+            if self.parentViewController?.title == "Send Business Card" {
+                CoreDataManager.saveReceivedCardToCoreData(self.cardModel)
+            } else {
+                CoreDataManager.saveMyCardToCoreData(self.cardModel)
+                NetworkManager.sharedInstance.saveCardToServer(self.cardModel.cardFirstName, lastName: self.cardModel.cardLastName, company: self.cardModel.cardCompany, jobTitle: self.cardModel.cardJobTitle, networkCompletionBlock: { (returnedObject, returnedString, returnedBool ) -> Void? in
+                    print("Returned Data: \(returnedObject) with response \(returnedString), and bool \(returnedBool)")
+                })
+            }
+        
+        }
+        
     }
     
-    
-  }
-  
-  
-  
-  
-  /*
-  // MARK: - Navigation
-  
-  // In a storyboard-based application, you will often want to do a little preparation before navigation
-  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-  // Get the new view controller using segue.destinationViewController.
-  // Pass the selected object to the new view controller.
-  }
-  */
-  
 }

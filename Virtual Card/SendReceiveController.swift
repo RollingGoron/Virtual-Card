@@ -17,7 +17,7 @@ class SendReceiveController: UIViewController {
   let communicationManager = CommunicationManager()
   
   override func viewDidLoad() {
-    self.title = "Title"
+    self.title = "Send Business Card"
     self.navigationController!.navigationBar.topItem!.title = ""
     communicationManager.delegate = self
     
