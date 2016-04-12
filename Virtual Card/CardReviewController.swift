@@ -10,7 +10,7 @@ import UIKit
 
 protocol TaskCompletedProtocol:class
 {
-  func saveButtonClicked()
+    func saveButtonClicked()
 }
 
 class CardReviewController: UIViewController {
@@ -44,44 +44,47 @@ class CardReviewController: UIViewController {
     jobTitleLabel.text = cardModel.cardJobTitle
     companyLabel.text = cardModel.cardCompany
     
-    // Do any additional setup after loading the view.
-  }
-  
-  func cancelClicked(){
-    dismissViewControllerAnimated(true) { () -> Void in
-      
-    };
-  }
-  
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-  }
-  
-  @IBAction func dismissController(sender: AnyObject) {
-    let isSaved = CoreDataManager.saveMyCardToCoreData(self.cardModel)! as Bool
+    var cardModel : CardModel!
+    var cardSaved: Bool!
     
-        if isSaved {
-            self.delegate!.saveButtonClicked()
-            dismissViewControllerAnimated(false) { () -> Void in
-            }
-        }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.title = "Title"
         
-        self.navigationController?.popViewControllerAnimated(true)
+        let cancelButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: "cancelClicked")
+        navigationItem.leftBarButtonItem = cancelButton
         
-        dismissViewControllerAnimated(true) { () -> Void in
-            
-            if self.parentViewController?.title == "Send Business Card" {
-                CoreDataManager.saveReceivedCardToCoreData(self.cardModel)
-            } else {
-                CoreDataManager.saveMyCardToCoreData(self.cardModel)
-                NetworkManager.sharedInstance.saveCardToServer(self.cardModel.cardFirstName, lastName: self.cardModel.cardLastName, company: self.cardModel.cardCompany, jobTitle: self.cardModel.cardJobTitle, networkCompletionBlock: { (returnedObject, returnedString, returnedBool ) -> Void? in
-                    print("Returned Data: \(returnedObject) with response \(returnedString), and bool \(returnedBool)")
-                })
-            }
+        firstNameLabel.text = cardModel.cardFirstName
+        lastNameLabel.text = cardModel.cardLastName
+        jobTitleLabel.text = cardModel.cardJobTitle
+        companyLabel.text = cardModel.cardCompany
         
-        }
-        
+        // Do any additional setup after loading the view.
     }
     
+    func cancelClicked(){
+        dismissViewControllerAnimated(true) { () -> Void in
+            
+        };
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func dismissController(sender: AnyObject) {
+        if self.parentViewController?.title != "Send Business Card" {
+            CoreDataManager.saveReceivedCardToCoreData(self.cardModel)
+            self.navigationController?.popToRootViewControllerAnimated(true)
+        } else {
+            CoreDataManager.saveMyCardToCoreData(self.cardModel)
+            NetworkManager.sharedInstance.saveCardToServer(self.cardModel.cardFirstName, lastName: self.cardModel.cardLastName, company: self.cardModel.cardCompany, jobTitle: self.cardModel.cardJobTitle, networkCompletionBlock: { (returnedObject, returnedString, returnedBool ) -> Void in
+                        self.navigationController?.popToRootViewControllerAnimated(true)
+                print("Returned Data: \(returnedObject) with response \(returnedString), and bool \(returnedBool)")
+            })
+        }
+        
+        
+    }
 }

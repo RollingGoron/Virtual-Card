@@ -88,8 +88,7 @@ class CoreDataManager: NSObject {
             
         } catch {
             print("Error fetching saved card!")
+            return NSArray();
         }
-        
-        return NSArray();
     }
 }
