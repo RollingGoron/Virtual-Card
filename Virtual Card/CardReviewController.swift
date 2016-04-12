@@ -70,7 +70,6 @@ class CardReviewController: UIViewController {
 //    
 //  
 //  }
-
   
   @IBAction func dismissController(sender: AnyObject) {
 
