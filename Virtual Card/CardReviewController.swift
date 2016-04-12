@@ -10,7 +10,7 @@ import UIKit
 
 protocol TaskCompletedProtocol:class
 {
-    func saveButtonClicked()
+  func saveButtonClicked()
 }
 
 class CardReviewController: UIViewController {
@@ -19,9 +19,10 @@ class CardReviewController: UIViewController {
   @IBOutlet weak var lastNameLabel: UILabel!
   @IBOutlet weak var jobTitleLabel: UILabel!
   @IBOutlet weak var companyLabel: UILabel!
+  @IBOutlet weak var saveButton: UIButton!
   
   @IBOutlet weak var bgView: UIView!
-  @IBOutlet weak var saveButton: UIButton!
+  
   weak var delegate: TaskCompletedProtocol?
   
   var cardModel : CardModel!
@@ -43,48 +44,51 @@ class CardReviewController: UIViewController {
     firstNameLabel.text = aStr
     jobTitleLabel.text = cardModel.cardJobTitle
     companyLabel.text = cardModel.cardCompany
+    firstNameLabel.text = cardModel.cardFirstName
+
+  }
+  
+  func cancelClicked(){
+    dismissViewControllerAnimated(true) { () -> Void in
+      
+    };
+  }
+  
+  override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+    // Dispose of any resources that can be recreated.
+  }
+//  
+//  @IBAction func dismissController(sender: AnyObject) {
+//    let isSaved = CoreDataManager.saveMyCardToCoreData(self.cardModel)! as Bool
+//    
+//    if isSaved {
+//      self.delegate!.saveButtonClicked()
+//      dismissViewControllerAnimated(false) { () -> Void in
+//      }
+//    }
+//    
+//  
+//  }
+
+  
+  @IBAction func dismissController(sender: AnyObject) {
+
     
-    var cardModel : CardModel!
-    var cardSaved: Bool!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.title = "Title"
-        
-        let cancelButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: "cancelClicked")
-        navigationItem.leftBarButtonItem = cancelButton
-        
-        firstNameLabel.text = cardModel.cardFirstName
-        lastNameLabel.text = cardModel.cardLastName
-        jobTitleLabel.text = cardModel.cardJobTitle
-        companyLabel.text = cardModel.cardCompany
-        
-        // Do any additional setup after loading the view.
+    if self.parentViewController?.title != "Send Business Card" {
+      CoreDataManager.saveReceivedCardToCoreData(self.cardModel)
+      dismissViewControllerAnimated(false) { () -> Void in
+      }
+
+      self.navigationController?.popViewControllerAnimated(true)
+    } else {
+      CoreDataManager.saveMyCardToCoreData(self.cardModel)
+      NetworkManager.sharedInstance.saveCardToServer(self.cardModel.cardFirstName, lastName: self.cardModel.cardLastName, company: self.cardModel.cardCompany, jobTitle: self.cardModel.cardJobTitle, networkCompletionBlock: { (returnedObject, returnedString, returnedBool ) -> Void in
+        self.navigationController?.popToRootViewControllerAnimated(true)
+        print("Returned Data: \(returnedObject) with response \(returnedString), and bool \(returnedBool)")
+      })
     }
     
-    func cancelClicked(){
-        dismissViewControllerAnimated(true) { () -> Void in
-            
-        };
-    }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    @IBAction func dismissController(sender: AnyObject) {
-        if self.parentViewController?.title != "Send Business Card" {
-            CoreDataManager.saveReceivedCardToCoreData(self.cardModel)
-            self.navigationController?.popToRootViewControllerAnimated(true)
-        } else {
-            CoreDataManager.saveMyCardToCoreData(self.cardModel)
-            NetworkManager.sharedInstance.saveCardToServer(self.cardModel.cardFirstName, lastName: self.cardModel.cardLastName, company: self.cardModel.cardCompany, jobTitle: self.cardModel.cardJobTitle, networkCompletionBlock: { (returnedObject, returnedString, returnedBool ) -> Void in
-                        self.navigationController?.popToRootViewControllerAnimated(true)
-                print("Returned Data: \(returnedObject) with response \(returnedString), and bool \(returnedBool)")
-            })
-        }
-        
-        
-    }
+  }
 }
