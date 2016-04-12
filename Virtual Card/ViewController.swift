@@ -57,8 +57,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     
     if indexPath.row == 0 {
-      let createCardController = self.storyboard?.instantiateViewControllerWithIdentifier("CreateNewCardController")
-      self.navigationController?.pushViewController(createCardController!, animated: true)
+      
+      if CoreDataManager.returnMyBusinessCard() == nil {
+        let createCardController = self.storyboard?.instantiateViewControllerWithIdentifier("CreateNewCardController")
+        self.navigationController?.pushViewController(createCardController!, animated: true)
+      } else {
+        let detailCardViewController = self.storyboard?.instantiateViewControllerWithIdentifier("CardDetailViewController") as! CardDetailViewController
+        //detailCardViewController.cardModel
+        self.navigationController?.pushViewController(detailCardViewController, animated: true)
+      }
+      
+      
     }else if indexPath.row == 1 {
       let savedCardsController = self.storyboard?.instantiateViewControllerWithIdentifier("SavedCardsController")
       self.navigationController?.pushViewController(savedCardsController!, animated: true)
