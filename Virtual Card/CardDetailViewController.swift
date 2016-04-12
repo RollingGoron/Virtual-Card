@@ -2,7 +2,7 @@
 //  CardDetailViewController.swift
 //  Virtual Card
 //
-//  Created by Srinivas Mamidishetty on 4/12/16.
+//  Created by Manasa Reddy on 4/12/16.
 //  Copyright © 2016 Peter Gosling. All rights reserved.
 //
 
@@ -18,7 +18,9 @@ class CardDetailViewController: UIViewController {
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var bgView: UIView!
-    
+    @IBOutlet weak var imgView:UIImageView!
+  
+  
     var cardModel : CardModel!
 
     override func viewDidLoad() {
@@ -44,7 +46,5 @@ class CardDetailViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
 
 }
