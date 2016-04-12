@@ -12,7 +12,7 @@ class NetworkManager: NSObject {
     
     static let sharedInstance = NetworkManager()
     
-    typealias NetworkCompletionBlock = ((AnyObject, String, Bool) -> Void?) // Change from AnyObject to known return type once agreed upon
+    typealias NetworkCompletionBlock = (([String : AnyObject], String, Bool) -> Void?) // Change from AnyObject to known return type once agreed upon
     
     func sendAPI(apiRequest : NSMutableURLRequest, networkCompletionBlock : NetworkCompletionBlock) {
         
@@ -40,9 +40,9 @@ class NetworkManager: NSObject {
         
     }
     
-    func saveCardToServer(networkCompletionBlock : NetworkCompletionBlock) -> Void {
+    func saveCardToServer(firstName  : String, lastName : String, company : String, jobTitle : String, networkCompletionBlock : NetworkCompletionBlock) -> Void {
         
-        let jsonDictionary = ["userId": "peter1", "fName" : "Peter", "sName" : "Gosling", "phone" : "555666666"]
+        let jsonDictionary = ["userId": firstName+"1", "fName" : firstName, "sName" : lastName, "companyName" : company]
         
         
         do {
@@ -63,8 +63,16 @@ class NetworkManager: NSObject {
         
     }
     
-    func fetchAllCardsForAccount() -> Void{
+    func fetchAllCardsForAccount(networkCompletionBlock : NetworkCompletionBlock) {
         
+        do {
+            let fetchRequest = NSMutableURLRequest(URL: NSURL(string: "http://businesscardhackathon.gbsfr7dipy.us-west-2.elasticbeanstalk.com/businessCard")!)
+            fetchRequest.HTTPMethod = "GET"
+            sendAPI(fetchRequest, networkCompletionBlock: { (returnedObject, returnedString, returnedBool) -> Void? in
+                networkCompletionBlock(returnedObject, returnedString, returnedBool)
+            })
+            
+        }
     }
     
 }

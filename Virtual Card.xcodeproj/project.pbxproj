@@ -17,6 +17,8 @@
 		2D4015D01CA5840500B41B6A /* CardEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4015CE1CA5840500B41B6A /* CardEntity.swift */; };
 		2D4015D31CA58A9500B41B6A /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4015D11CA58A9500B41B6A /* HomeCell.swift */; };
 		2D4015D41CA58A9500B41B6A /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D4015D21CA58A9500B41B6A /* HomeCell.xib */; };
+		2D4E4ACC1CBC335300896C0B /* SavedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4E4ACA1CBC335300896C0B /* SavedCell.swift */; };
+		2D4E4ACD1CBC335300896C0B /* SavedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D4E4ACB1CBC335300896C0B /* SavedCell.xib */; };
 		2DBC3A261CA2282B00EF303B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC3A251CA2282B00EF303B /* AppDelegate.swift */; };
 		2DBC3A281CA2282B00EF303B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC3A271CA2282B00EF303B /* ViewController.swift */; };
 		2DBC3A2E1CA2282B00EF303B /* Virtual_Card.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC3A2C1CA2282B00EF303B /* Virtual_Card.xcdatamodeld */; };
@@ -60,6 +62,8 @@
 		2D4015CE1CA5840500B41B6A /* CardEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardEntity.swift; path = ../CardEntity.swift; sourceTree = "<group>"; };
 		2D4015D11CA58A9500B41B6A /* HomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeCell.swift; path = "Virtual Card/HomeCell.swift"; sourceTree = "<group>"; };
 		2D4015D21CA58A9500B41B6A /* HomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeCell.xib; path = "Virtual Card/HomeCell.xib"; sourceTree = "<group>"; };
+		2D4E4ACA1CBC335300896C0B /* SavedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedCell.swift; sourceTree = "<group>"; };
+		2D4E4ACB1CBC335300896C0B /* SavedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SavedCell.xib; sourceTree = "<group>"; };
 		2DBC3A221CA2282B00EF303B /* Virtual Card.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Virtual Card.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DBC3A251CA2282B00EF303B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DBC3A271CA2282B00EF303B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +148,8 @@
 			children = (
 				2D4015D11CA58A9500B41B6A /* HomeCell.swift */,
 				2D4015D21CA58A9500B41B6A /* HomeCell.xib */,
+				2D4E4ACA1CBC335300896C0B /* SavedCell.swift */,
+				2D4E4ACB1CBC335300896C0B /* SavedCell.xib */,
 			);
 			name = Cells;
 			path = ..;
@@ -311,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DBC3A331CA2282B00EF303B /* LaunchScreen.storyboard in Resources */,
+				2D4E4ACD1CBC335300896C0B /* SavedCell.xib in Resources */,
 				2DBC3A301CA2282B00EF303B /* Assets.xcassets in Resources */,
 				2D4015D41CA58A9500B41B6A /* HomeCell.xib in Resources */,
 				328930C81CBC294A00D0AA40 /* Main.storyboard in Resources */,
@@ -351,6 +358,7 @@
 				2DBC3A571CA2289800EF303B /* CommunicationManager.swift in Sources */,
 				2D4015CF1CA5840500B41B6A /* CardEntity+CoreDataProperties.swift in Sources */,
 				2D1BD9DB1CA86EB700E95BCE /* SavedEntity.swift in Sources */,
+				2D4E4ACC1CBC335300896C0B /* SavedCell.swift in Sources */,
 				2D4015D01CA5840500B41B6A /* CardEntity.swift in Sources */,
 				2DBC3A2E1CA2282B00EF303B /* Virtual_Card.xcdatamodeld in Sources */,
 				2D1BD9D71CA8628100E95BCE /* CardReviewController.swift in Sources */,
