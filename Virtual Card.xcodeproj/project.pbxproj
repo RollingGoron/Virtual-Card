@@ -31,7 +31,7 @@
 		2DBC3A5B1CA228B600EF303B /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC3A5A1CA228B600EF303B /* CoreDataManager.swift */; };
 		2DBC3A5D1CA2370600EF303B /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC3A5C1CA2370600EF303B /* CardModel.swift */; };
 		3271C0311CBD72A40069DCD1 /* CardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3271C0301CBD72A40069DCD1 /* CardDetailViewController.swift */; };
-		3271C0331CBD72C50069DCD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3271C0321CBD72C50069DCD1 /* Main.storyboard */; };
+		3271C0351CBD76A50069DCD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3271C0341CBD76A50069DCD1 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,7 +83,7 @@
 		2DBC3A5A1CA228B600EF303B /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		2DBC3A5C1CA2370600EF303B /* CardModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 		3271C0301CBD72A40069DCD1 /* CardDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDetailViewController.swift; sourceTree = "<group>"; };
-		3271C0321CBD72C50069DCD1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		3271C0341CBD76A50069DCD1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,7 +188,7 @@
 				2D4015C41CA5827700B41B6A /* Managers */,
 				2D4015C51CA5827E00B41B6A /* Models */,
 				2DBC3A2F1CA2282B00EF303B /* Assets.xcassets */,
-				3271C0321CBD72C50069DCD1 /* Main.storyboard */,
+				3271C0341CBD76A50069DCD1 /* Main.storyboard */,
 				2DBC3A311CA2282B00EF303B /* LaunchScreen.storyboard */,
 				2DBC3A341CA2282B00EF303B /* Info.plist */,
 				2DBC3A2C1CA2282B00EF303B /* Virtual_Card.xcdatamodeld */,
@@ -320,7 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DBC3A331CA2282B00EF303B /* LaunchScreen.storyboard in Resources */,
-				3271C0331CBD72C50069DCD1 /* Main.storyboard in Resources */,
+				3271C0351CBD76A50069DCD1 /* Main.storyboard in Resources */,
 				2D4E4ACD1CBC335300896C0B /* SavedCell.xib in Resources */,
 				2DBC3A301CA2282B00EF303B /* Assets.xcassets in Resources */,
 				2D4015D41CA58A9500B41B6A /* HomeCell.xib in Resources */,
