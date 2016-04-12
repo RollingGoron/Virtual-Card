@@ -12,7 +12,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   
   @IBOutlet weak var tableView: UITableView!
   
-  let tableData = ["Create new OPEN Business Card", "Saved Business Cards", "Send/Receive OPEN Business Card"]
+    
+  var tableData = [String]()
 
   
   
@@ -23,12 +24,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     self.tableView.dataSource = self
     self.tableView.tableFooterView = UIView(frame: CGRect.zero)
     self.tableView.registerNib(UINib(nibName: "HomeCell", bundle: nil), forCellReuseIdentifier: "HomeCell")
-        
-    // Do any additional setup after loading the view, typically from a nib.
   }
   
   override func viewWillAppear(animated: Bool) {
-    self.title = "Title"
+    self.title = "OPEN Virtual Business Card"
+    if CoreDataManager.returnMyBusinessCard() == nil {
+      tableData = ["Create new OPEN Business Card", "Saved Business Cards", "Send/Receive OPEN Business Card"]
+    } else {
+      tableData = ["View My OPEN Business Card", "Saved Business Cards", "Send/Receive OPEN Business Card"]
+    }
   }
   
   override func didReceiveMemoryWarning() {

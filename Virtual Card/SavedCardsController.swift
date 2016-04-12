@@ -10,7 +10,7 @@ import UIKit
 
 class SavedCardsController: UIViewController {
   @IBOutlet weak var savedCardsTableView: UITableView!
-  var tableData = NSArray()
+  var tableData = NSMutableArray()
   override func viewDidLoad() {
     super.viewDidLoad()
     self.title = "Title"
@@ -80,4 +80,24 @@ extension SavedCardsController : UITableViewDataSource, UITableViewDelegate {
     cardDetailController.cardModel = CardModel(savedEntity: savedEntity)
     self.navigationController?.pushViewController(cardDetailController, animated: true)
   }
+    
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let savedEntity = tableData[indexPath.row] as! SavedEntity
+        print("UserID = \(savedEntity.userID)")
+        
+        if editingStyle == .Delete {
+            NetworkManager.sharedInstance.deleteCardFromAccount(savedEntity) { (returnedData, returnedString, returnedBool) -> Void in
+                print("Deleted Item!")
+            }
+            self.tableData.removeObjectAtIndex(indexPath.row)
+            self.savedCardsTableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            CoreDataManager.removeSavedItemFromCoreData(savedEntity)
+        }
+    }
+
 }
