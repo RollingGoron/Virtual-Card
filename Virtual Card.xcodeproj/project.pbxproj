@@ -16,7 +16,6 @@
 		2D4015CF1CA5840500B41B6A /* CardEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4015CD1CA5840500B41B6A /* CardEntity+CoreDataProperties.swift */; };
 		2D4015D01CA5840500B41B6A /* CardEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4015CE1CA5840500B41B6A /* CardEntity.swift */; };
 		2D4015D31CA58A9500B41B6A /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4015D11CA58A9500B41B6A /* HomeCell.swift */; };
-		2D4015D41CA58A9500B41B6A /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D4015D21CA58A9500B41B6A /* HomeCell.xib */; };
 		2DBC3A261CA2282B00EF303B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC3A251CA2282B00EF303B /* AppDelegate.swift */; };
 		2DBC3A281CA2282B00EF303B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC3A271CA2282B00EF303B /* ViewController.swift */; };
 		2DBC3A2E1CA2282B00EF303B /* Virtual_Card.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC3A2C1CA2282B00EF303B /* Virtual_Card.xcdatamodeld */; };
@@ -28,7 +27,8 @@
 		2DBC3A591CA228A700EF303B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC3A581CA228A700EF303B /* NetworkManager.swift */; };
 		2DBC3A5B1CA228B600EF303B /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC3A5A1CA228B600EF303B /* CoreDataManager.swift */; };
 		2DBC3A5D1CA2370600EF303B /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC3A5C1CA2370600EF303B /* CardModel.swift */; };
-		328930C81CBC294A00D0AA40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 328930C71CBC294A00D0AA40 /* Main.storyboard */; };
+		3263A37C1CBCB0EB00302437 /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3263A37B1CBCB0EB00302437 /* HomeCell.xib */; };
+		3263A3801CBD3D0900302437 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3263A37F1CBD3D0800302437 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +59,6 @@
 		2D4015CD1CA5840500B41B6A /* CardEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CardEntity+CoreDataProperties.swift"; path = "../CardEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2D4015CE1CA5840500B41B6A /* CardEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardEntity.swift; path = ../CardEntity.swift; sourceTree = "<group>"; };
 		2D4015D11CA58A9500B41B6A /* HomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeCell.swift; path = "Virtual Card/HomeCell.swift"; sourceTree = "<group>"; };
-		2D4015D21CA58A9500B41B6A /* HomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeCell.xib; path = "Virtual Card/HomeCell.xib"; sourceTree = "<group>"; };
 		2DBC3A221CA2282B00EF303B /* Virtual Card.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Virtual Card.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DBC3A251CA2282B00EF303B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DBC3A271CA2282B00EF303B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -77,7 +76,8 @@
 		2DBC3A581CA228A700EF303B /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		2DBC3A5A1CA228B600EF303B /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		2DBC3A5C1CA2370600EF303B /* CardModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
-		328930C71CBC294A00D0AA40 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		3263A37B1CBCB0EB00302437 /* HomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
+		3263A37F1CBD3D0800302437 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,7 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				2D4015D11CA58A9500B41B6A /* HomeCell.swift */,
-				2D4015D21CA58A9500B41B6A /* HomeCell.xib */,
+				3263A37B1CBCB0EB00302437 /* HomeCell.xib */,
 			);
 			name = Cells;
 			path = ..;
@@ -179,7 +179,7 @@
 				2D4015C41CA5827700B41B6A /* Managers */,
 				2D4015C51CA5827E00B41B6A /* Models */,
 				2DBC3A2F1CA2282B00EF303B /* Assets.xcassets */,
-				328930C71CBC294A00D0AA40 /* Main.storyboard */,
+				3263A37F1CBD3D0800302437 /* Main.storyboard */,
 				2DBC3A311CA2282B00EF303B /* LaunchScreen.storyboard */,
 				2DBC3A341CA2282B00EF303B /* Info.plist */,
 				2DBC3A2C1CA2282B00EF303B /* Virtual_Card.xcdatamodeld */,
@@ -312,8 +312,8 @@
 			files = (
 				2DBC3A331CA2282B00EF303B /* LaunchScreen.storyboard in Resources */,
 				2DBC3A301CA2282B00EF303B /* Assets.xcassets in Resources */,
-				2D4015D41CA58A9500B41B6A /* HomeCell.xib in Resources */,
-				328930C81CBC294A00D0AA40 /* Main.storyboard in Resources */,
+				3263A37C1CBCB0EB00302437 /* HomeCell.xib in Resources */,
+				3263A3801CBD3D0900302437 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
