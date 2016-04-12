@@ -72,7 +72,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JNl-h0-ZYl">
-                                <rect key="frame" x="231" y="285" width="138" height="30"/>
+                                <rect key="frame" x="210" y="282" width="180" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Send Business Card"/>
                                 <connections>
                                     <action selector="sendBusinessCard:" destination="weL-pJ-e6I" eventType="touchUpInside" id="zCv-H8-7Za"/>
