@@ -2,7 +2,7 @@
 //  CardEntity.swift
 //  Virtual Card
 //
-//  Created by Peter Gosling on 3/25/16.
+//  Created by Peter Gosling on 4/12/16.
 //  Copyright © 2016 Peter Gosling. All rights reserved.
 //
 

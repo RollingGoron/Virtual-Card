@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		2D1BD9D71CA8628100E95BCE /* CardReviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1BD9D61CA8628100E95BCE /* CardReviewController.swift */; };
-		2D1BD9DA1CA86EB700E95BCE /* SavedEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1BD9D81CA86EB700E95BCE /* SavedEntity+CoreDataProperties.swift */; };
-		2D1BD9DB1CA86EB700E95BCE /* SavedEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1BD9D91CA86EB700E95BCE /* SavedEntity.swift */; };
+		2D2F300A1CBD5745009CACAD /* SavedEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2F30061CBD5745009CACAD /* SavedEntity+CoreDataProperties.swift */; };
+		2D2F300B1CBD5745009CACAD /* SavedEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2F30071CBD5745009CACAD /* SavedEntity.swift */; };
+		2D2F300C1CBD5745009CACAD /* CardEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2F30081CBD5745009CACAD /* CardEntity+CoreDataProperties.swift */; };
+		2D2F300D1CBD5745009CACAD /* CardEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2F30091CBD5745009CACAD /* CardEntity.swift */; };
 		2D4015BE1CA581DA00B41B6A /* SavedCardsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4015BD1CA581DA00B41B6A /* SavedCardsController.swift */; };
 		2D4015C01CA581EA00B41B6A /* CreateNewCardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4015BF1CA581EA00B41B6A /* CreateNewCardController.swift */; };
 		2D4015C21CA581FF00B41B6A /* SendReceiveController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4015C11CA581FF00B41B6A /* SendReceiveController.swift */; };
-		2D4015CF1CA5840500B41B6A /* CardEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4015CD1CA5840500B41B6A /* CardEntity+CoreDataProperties.swift */; };
-		2D4015D01CA5840500B41B6A /* CardEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4015CE1CA5840500B41B6A /* CardEntity.swift */; };
 		2D4015D31CA58A9500B41B6A /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4015D11CA58A9500B41B6A /* HomeCell.swift */; };
 		2D4015D41CA58A9500B41B6A /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D4015D21CA58A9500B41B6A /* HomeCell.xib */; };
 		2D4E4ACC1CBC335300896C0B /* SavedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4E4ACA1CBC335300896C0B /* SavedCell.swift */; };
@@ -52,14 +52,14 @@
 
 /* Begin PBXFileReference section */
 		2D1BD9D61CA8628100E95BCE /* CardReviewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardReviewController.swift; sourceTree = "<group>"; };
-		2D1BD9D81CA86EB700E95BCE /* SavedEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SavedEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		2D1BD9D91CA86EB700E95BCE /* SavedEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedEntity.swift; sourceTree = "<group>"; };
+		2D2F30061CBD5745009CACAD /* SavedEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "SavedEntity+CoreDataProperties.swift"; path = "../SavedEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2D2F30071CBD5745009CACAD /* SavedEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SavedEntity.swift; path = ../SavedEntity.swift; sourceTree = "<group>"; };
+		2D2F30081CBD5745009CACAD /* CardEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CardEntity+CoreDataProperties.swift"; path = "../CardEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2D2F30091CBD5745009CACAD /* CardEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardEntity.swift; path = ../CardEntity.swift; sourceTree = "<group>"; };
 		2D4015BD1CA581DA00B41B6A /* SavedCardsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedCardsController.swift; sourceTree = "<group>"; };
 		2D4015BF1CA581EA00B41B6A /* CreateNewCardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewCardController.swift; sourceTree = "<group>"; };
 		2D4015C11CA581FF00B41B6A /* SendReceiveController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendReceiveController.swift; sourceTree = "<group>"; };
 		2D4015C61CA583E500B41B6A /* Virtual Card-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Virtual Card-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
-		2D4015CD1CA5840500B41B6A /* CardEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CardEntity+CoreDataProperties.swift"; path = "../CardEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		2D4015CE1CA5840500B41B6A /* CardEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardEntity.swift; path = ../CardEntity.swift; sourceTree = "<group>"; };
 		2D4015D11CA58A9500B41B6A /* HomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeCell.swift; path = "Virtual Card/HomeCell.swift"; sourceTree = "<group>"; };
 		2D4015D21CA58A9500B41B6A /* HomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeCell.xib; path = "Virtual Card/HomeCell.xib"; sourceTree = "<group>"; };
 		2D4E4ACA1CBC335300896C0B /* SavedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedCell.swift; sourceTree = "<group>"; };
@@ -134,10 +134,10 @@
 		2D4015C51CA5827E00B41B6A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				2D1BD9D81CA86EB700E95BCE /* SavedEntity+CoreDataProperties.swift */,
-				2D1BD9D91CA86EB700E95BCE /* SavedEntity.swift */,
-				2D4015CD1CA5840500B41B6A /* CardEntity+CoreDataProperties.swift */,
-				2D4015CE1CA5840500B41B6A /* CardEntity.swift */,
+				2D2F30061CBD5745009CACAD /* SavedEntity+CoreDataProperties.swift */,
+				2D2F30071CBD5745009CACAD /* SavedEntity.swift */,
+				2D2F30081CBD5745009CACAD /* CardEntity+CoreDataProperties.swift */,
+				2D2F30091CBD5745009CACAD /* CardEntity.swift */,
 				2DBC3A5C1CA2370600EF303B /* CardModel.swift */,
 			);
 			name = Models;
@@ -345,6 +345,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D2F300C1CBD5745009CACAD /* CardEntity+CoreDataProperties.swift in Sources */,
 				2DBC3A5B1CA228B600EF303B /* CoreDataManager.swift in Sources */,
 				2D4015C21CA581FF00B41B6A /* SendReceiveController.swift in Sources */,
 				2D4015BE1CA581DA00B41B6A /* SavedCardsController.swift in Sources */,
@@ -352,15 +353,14 @@
 				2D4015C01CA581EA00B41B6A /* CreateNewCardController.swift in Sources */,
 				2DBC3A261CA2282B00EF303B /* AppDelegate.swift in Sources */,
 				2D4015D31CA58A9500B41B6A /* HomeCell.swift in Sources */,
-				2D1BD9DA1CA86EB700E95BCE /* SavedEntity+CoreDataProperties.swift in Sources */,
 				2DBC3A5D1CA2370600EF303B /* CardModel.swift in Sources */,
+				2D2F300B1CBD5745009CACAD /* SavedEntity.swift in Sources */,
 				2DBC3A591CA228A700EF303B /* NetworkManager.swift in Sources */,
 				2DBC3A571CA2289800EF303B /* CommunicationManager.swift in Sources */,
-				2D4015CF1CA5840500B41B6A /* CardEntity+CoreDataProperties.swift in Sources */,
-				2D1BD9DB1CA86EB700E95BCE /* SavedEntity.swift in Sources */,
 				2D4E4ACC1CBC335300896C0B /* SavedCell.swift in Sources */,
-				2D4015D01CA5840500B41B6A /* CardEntity.swift in Sources */,
+				2D2F300D1CBD5745009CACAD /* CardEntity.swift in Sources */,
 				2DBC3A2E1CA2282B00EF303B /* Virtual_Card.xcdatamodeld in Sources */,
+				2D2F300A1CBD5745009CACAD /* SavedEntity+CoreDataProperties.swift in Sources */,
 				2D1BD9D71CA8628100E95BCE /* CardReviewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

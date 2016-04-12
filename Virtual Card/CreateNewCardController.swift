@@ -45,7 +45,7 @@ class CreateNewCardController: UIViewController, TaskCompletedProtocol {
       let cardReviewNav = self.storyboard?.instantiateViewControllerWithIdentifier("CardReviewNavigation") as! UINavigationController
       
       let cardReviewController = cardReviewNav.viewControllers[0] as! CardReviewController
-      cardReviewController.cardModel = CardModel(cardFirstName: firstNameTextField.text!, cardLastName: lastNameTextField.text!, cardJobTitle: jobTitleTextField.text!, cardCompany: companyTextField.text!)
+      cardReviewController.cardModel = CardModel(cardFirstName: firstNameTextField.text!, cardLastName: lastNameTextField.text!, cardJobTitle: jobTitleTextField.text!, cardCompany: companyTextField.text!, cardUserID: firstNameTextField.text!, cardPhoneNumber: "555-666-4332", cardAddress: "123 E Fake St.", cardEmail: "userEmail@gmail.com")
       cardReviewController.cardSaved = cardSaved
       cardReviewController.delegate = self
       

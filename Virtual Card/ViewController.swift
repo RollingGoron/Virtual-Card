@@ -13,7 +13,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   @IBOutlet weak var tableView: UITableView!
   
   let tableData = ["Create new OPEN Business Card", "Saved Business Cards", "Send/Receive OPEN Business Card"]
-  let cardData = CardModel(cardFirstName: "Bob", cardLastName: "Sacamano", cardJobTitle: "Accountant", cardCompany: "Target")
+
   
   
   override func viewDidLoad() {

@@ -27,12 +27,11 @@ class SavedCardsController: UIViewController {
             guard let returnedCardsArray = returnedObject["busiunessCards"] as? [Dictionary<String, String>] else {
                 return
             }
-            
+            print(returnedCardsArray)
             if returnedCardsArray.count != self.tableData.count { // Check if new cards have been added.
                 
                 for (var i = 0; i < returnedCardsArray.count; i++) {
                     print(returnedCardsArray[i])
-                    
                     CoreDataManager.saveReceivedCardToCoreData(CardModel(fetchedDictionary: returnedCardsArray[i]))
                 }
                 self.tableData = CoreDataManager.returnAllSavedCards()
@@ -61,6 +60,8 @@ extension SavedCardsController : UITableViewDataSource, UITableViewDelegate {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let savedEntity = tableData[indexPath.row] as! SavedEntity
+        
+        print("Saved Entity \(savedEntity.phoneNumber)")
         
         let cell = tableView.dequeueReusableCellWithIdentifier("SavedCell") as! SavedCell
         

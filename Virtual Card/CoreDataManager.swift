@@ -23,6 +23,10 @@ class CoreDataManager: NSObject {
         cardEntity.lastName = cardModel.cardLastName
         cardEntity.company = cardModel.cardCompany
         cardEntity.jobTitle = cardModel.cardJobTitle
+        cardEntity.email = cardModel.cardEmail
+        cardEntity.address = cardModel.cardAddress
+        cardEntity.userID = cardModel.cardUserID
+        cardEntity.phoneNumber = cardModel.cardPhoneNumber
         
         do {
             try managedObjectContext.save()
@@ -45,6 +49,10 @@ class CoreDataManager: NSObject {
         cardEntity.lastName = cardModel.cardLastName
         cardEntity.company = cardModel.cardCompany
         cardEntity.jobTitle = cardModel.cardJobTitle
+        cardEntity.email = cardModel.cardEmail
+        cardEntity.address = cardModel.cardAddress
+        cardEntity.userID = cardModel.cardUserID
+        cardEntity.phoneNumber = cardModel.cardPhoneNumber
         
         do {
             try managedObjectContext.save()

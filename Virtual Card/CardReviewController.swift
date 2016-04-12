@@ -53,10 +53,10 @@ class CardReviewController: UIViewController {
     
     @IBAction func dismissController(sender: AnyObject) {
         if self.parentViewController?.title != "Send Business Card" {
-            CoreDataManager.saveReceivedCardToCoreData(self.cardModel)
+            CoreDataManager.saveMyCardToCoreData(self.cardModel)
             self.navigationController?.popToRootViewControllerAnimated(true)
         } else {
-            CoreDataManager.saveMyCardToCoreData(self.cardModel)
+            CoreDataManager.saveReceivedCardToCoreData(self.cardModel)
             NetworkManager.sharedInstance.saveCardToServer(self.cardModel.cardFirstName, lastName: self.cardModel.cardLastName, company: self.cardModel.cardCompany, jobTitle: self.cardModel.cardJobTitle, networkCompletionBlock: { (returnedObject, returnedString, returnedBool ) -> Void in
                         self.navigationController?.popToRootViewControllerAnimated(true)
                 print("Returned Data: \(returnedObject) with response \(returnedString), and bool \(returnedBool)")

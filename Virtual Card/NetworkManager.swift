@@ -65,14 +65,19 @@ class NetworkManager: NSObject {
     
     func fetchAllCardsForAccount(networkCompletionBlock : NetworkCompletionBlock) {
         
-        do {
-            let fetchRequest = NSMutableURLRequest(URL: NSURL(string: "http://businesscardhackathon.gbsfr7dipy.us-west-2.elasticbeanstalk.com/businessCard")!)
-            fetchRequest.HTTPMethod = "GET"
-            sendAPI(fetchRequest, networkCompletionBlock: { (returnedObject, returnedString, returnedBool) -> Void? in
-                networkCompletionBlock(returnedObject, returnedString, returnedBool)
-            })
-            
-        }
+        let fetchRequest = NSMutableURLRequest(URL: NSURL(string: "http://businesscardhackathon.gbsfr7dipy.us-west-2.elasticbeanstalk.com/businessCard")!)
+        fetchRequest.HTTPMethod = "GET"
+        sendAPI(fetchRequest, networkCompletionBlock: { (returnedObject, returnedString, returnedBool) -> Void? in
+            networkCompletionBlock(returnedObject, returnedString, returnedBool)
+        })
+        
+    }
+    
+    func deleteCardFromAccount(cardModel : CardModel) {
+        let deleteReuqest = NSMutableURLRequest(URL: NSURL(string: "http://businesscardhackathon.gbsfr7dipy.us-west-2.elasticbeanstalk.com/businessCard?user")!)
+        deleteReuqest.HTTPMethod = "DELETE"
+        
+        
     }
     
 }
