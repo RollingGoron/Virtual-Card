@@ -11,6 +11,7 @@ import UIKit
 class HomeCell: UITableViewCell {
 
   @IBOutlet weak var tableLabel: UILabel!
+  @IBOutlet weak var iconImage: UIImageView!
   
     override func awakeFromNib() {
         super.awakeFromNib()

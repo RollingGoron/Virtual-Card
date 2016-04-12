@@ -29,10 +29,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   override func viewWillAppear(animated: Bool) {
     self.title = "OPEN Virtual Business Card"
     if CoreDataManager.returnMyBusinessCard() == nil {
-      tableData = ["Create new OPEN Business Card", "Saved Business Cards", "Send/Receive OPEN Business Card"]
+      tableData = ["Create new Business Card", "View My Network", "Exchange Business Cards"]
     } else {
-      tableData = ["View My OPEN Business Card", "Saved Business Cards", "Send/Receive OPEN Business Card"]
+      tableData = ["View My Business Card", "View My Network", "Exchange Business Cards"]
     }
+    
+    self.tableView.reloadData()
   }
   
   override func didReceiveMemoryWarning() {
@@ -48,7 +50,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     let cell = tableView.dequeueReusableCellWithIdentifier("HomeCell") as! HomeCell
     cell.tableLabel.text = tableData[indexPath.row]
-    cell.tableLabel.textAlignment = NSTextAlignment.Center
+    
+    
+    if indexPath.row == 0 {
+    cell.iconImage.image = UIImage(named: "createIcon")
+    } else if indexPath.row == 1 {
+      cell.iconImage.image = UIImage(named: "listIcon")
+    } else if indexPath.row == 2 {
+      cell.iconImage.image = UIImage(named: "transferIcon")
+    }
     
     return cell
     
@@ -63,7 +73,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.navigationController?.pushViewController(createCardController!, animated: true)
       } else {
         let detailCardViewController = self.storyboard?.instantiateViewControllerWithIdentifier("CardDetailViewController") as! CardDetailViewController
-        //detailCardViewController.cardModel
+        detailCardViewController.cardModel = CoreDataManager.returnMyBusinessCard()
         self.navigationController?.pushViewController(detailCardViewController, animated: true)
       }
       
