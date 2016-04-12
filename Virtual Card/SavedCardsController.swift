@@ -27,7 +27,7 @@ class SavedCardsController: UIViewController {
             guard let returnedCardsArray = returnedObject["busiunessCards"] as? [Dictionary<String, String>] else {
                 return
             }
-            print(returnedCardsArray)
+            
             if returnedCardsArray.count != self.tableData.count { // Check if new cards have been added.
                 
                 for (var i = 0; i < returnedCardsArray.count; i++) {

@@ -42,20 +42,14 @@ class CreateNewCardController: UIViewController, TaskCompletedProtocol {
     } else {
       
       
-      let cardReviewNav = self.storyboard?.instantiateViewControllerWithIdentifier("CardReviewNavigation") as! UINavigationController
+      let cardReviewController = self.storyboard?.instantiateViewControllerWithIdentifier("CardReviewController") as! CardReviewController
       
-      let cardReviewController = cardReviewNav.viewControllers[0] as! CardReviewController
       cardReviewController.cardModel = CardModel(cardFirstName: firstNameTextField.text!, cardLastName: lastNameTextField.text!, cardJobTitle: jobTitleTextField.text!, cardCompany: companyTextField.text!, cardUserID: firstNameTextField.text!, cardPhoneNumber: "555-666-4332", cardAddress: "123 E Fake St.", cardEmail: "userEmail@gmail.com")
       cardReviewController.cardSaved = cardSaved
+      cardReviewController.buttonText = "Save My Card"
       cardReviewController.delegate = self
       
-      self.presentViewController(cardReviewNav, animated: true, completion: { () -> Void in
-        
-      })
-      /*
-      let cardModel = CardModel(cardFirstName: firstNameTextField.text!, cardLastName: lastNameTextField.text!, cardJobTitle: jobTitleTextField.text!, cardCompany: companyTextField.text!)
-      CoreDataManager.saveMyCardToCoreData(cardModel)
-      self.navigationController?.popViewControllerAnimated(true)*/
+      self.navigationController?.pushViewController(cardReviewController, animated: true)
     }
     
   }

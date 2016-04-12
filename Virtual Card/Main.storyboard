@@ -194,7 +194,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gf1-l4-5lD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3249" y="323"/>
+            <point key="canvasLocation" x="2719" y="473"/>
         </scene>
         <!--Card Review Controller-->
         <scene sceneID="or4-Jn-baO">
@@ -281,6 +281,7 @@
                         <outlet property="firstNameLabel" destination="am2-HW-eib" id="V3X-5v-AsU"/>
                         <outlet property="jobTitleLabel" destination="Ypg-nk-D8Z" id="PhK-GJ-eZK"/>
                         <outlet property="lastNameLabel" destination="bcr-QJ-EIn" id="zyc-aA-b8X"/>
+                        <outlet property="saveButton" destination="AdK-73-zb7" id="sah-1q-sjk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gMN-cy-ex9" userLabel="First Responder" sceneMemberID="firstResponder"/>

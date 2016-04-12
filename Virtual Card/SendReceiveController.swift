@@ -65,6 +65,7 @@ extension SendReceiveController : CommunicationManagerDelegate {
       dispatch_async(dispatch_get_main_queue(), {
         let cardReviewController = self.storyboard!.instantiateViewControllerWithIdentifier("CardReviewController") as! CardReviewController
         cardReviewController.cardModel = cardModel
+        cardReviewController.buttonText = "Save Recevied Card"
         self.navigationController?.pushViewController(cardReviewController, animated: true)
       })
     //}

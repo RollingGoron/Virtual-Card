@@ -19,16 +19,18 @@ class CardReviewController: UIViewController {
     @IBOutlet weak var lastNameLabel: UILabel!
     @IBOutlet weak var jobTitleLabel: UILabel!
     @IBOutlet weak var companyLabel: UILabel!
+    @IBOutlet weak var saveButton: UIButton!
     
     weak var delegate: TaskCompletedProtocol?
     
     var cardModel : CardModel!
     var cardSaved: Bool!
+    var buttonText = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Title"
-        
+        self.saveButton.setTitle(buttonText, forState: .Normal)
         let cancelButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: "cancelClicked")
         navigationItem.leftBarButtonItem = cancelButton
         
@@ -53,11 +55,21 @@ class CardReviewController: UIViewController {
     
     @IBAction func dismissController(sender: AnyObject) {
         
-        CoreDataManager.saveReceivedCardToCoreData(self.cardModel)
-        NetworkManager.sharedInstance.saveCardToServer(self.cardModel.cardFirstName, lastName: self.cardModel.cardLastName, company: self.cardModel.cardCompany, jobTitle: self.cardModel.cardJobTitle, userId: self.cardModel.cardUserID, address: self.cardModel.cardAddress, emailAddress: self.cardModel.cardEmail, phoneNumber: self.cardModel.cardPhoneNumber, networkCompletionBlock: { (returnedObject, returnedString, returnedBool ) -> Void in
-            print("Returned Data: \(returnedObject) with response \(returnedString), and bool \(returnedBool)")
-        })
+        
+        if self.saveButton.titleLabel!.text == "Save My Card" {
+            print("Parent is Send Business Card")
+            CoreDataManager.saveMyCardToCoreData(self.cardModel)
+            self.navigationController?.popToRootViewControllerAnimated(true)
+        } else {
+            print("Parents is no Send Business Card")
+            CoreDataManager.saveReceivedCardToCoreData(self.cardModel)
+            NetworkManager.sharedInstance.saveCardToServer(self.cardModel.cardFirstName, lastName: self.cardModel.cardLastName, company: self.cardModel.cardCompany, jobTitle: self.cardModel.cardJobTitle, userId: self.cardModel.cardUserID, address: self.cardModel.cardAddress, emailAddress: self.cardModel.cardEmail, phoneNumber: self.cardModel.cardPhoneNumber, networkCompletionBlock: { (returnedObject, returnedString, returnedBool ) -> Void in
+                print("Returned Data: \(returnedObject) with response \(returnedString), and bool \(returnedBool)")
+            })
+            self.navigationController?.popToRootViewControllerAnimated(true)
 
+        }
+        
         
         
     }
