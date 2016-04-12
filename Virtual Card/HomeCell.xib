@@ -14,21 +14,31 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VUI-5a-Min">
-                        <rect key="frame" x="8" y="11" width="304" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VUI-5a-Min">
+                        <rect key="frame" x="16" y="11" width="246" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sN8-Va-yMc">
+                        <rect key="frame" x="270" y="5" width="33" height="33"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="33" id="fWH-pR-Lqz"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="VUI-5a-Min" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="2Ar-jG-j9V"/>
-                    <constraint firstItem="VUI-5a-Min" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Eib-iP-50Y"/>
-                    <constraint firstItem="VUI-5a-Min" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="PKe-yq-cPU"/>
-                    <constraint firstItem="VUI-5a-Min" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="RZb-K9-NEb"/>
+                    <constraint firstItem="sN8-Va-yMc" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="5IK-oS-hms"/>
+                    <constraint firstItem="VUI-5a-Min" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="EbW-Yg-hNW"/>
+                    <constraint firstItem="VUI-5a-Min" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="R4Q-By-f9t"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="sN8-Va-yMc" secondAttribute="trailing" constant="9" id="bmb-nw-db8"/>
+                    <constraint firstItem="sN8-Va-yMc" firstAttribute="leading" secondItem="VUI-5a-Min" secondAttribute="trailing" constant="8" id="jRx-mC-vYK"/>
+                    <constraint firstItem="sN8-Va-yMc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-3" id="tBe-bp-nv1"/>
+                    <constraint firstItem="VUI-5a-Min" firstAttribute="centerY" secondItem="sN8-Va-yMc" secondAttribute="centerY" id="tx1-1Q-r35"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="iconImage" destination="sN8-Va-yMc" id="OH0-t3-ase"/>
                 <outlet property="tableLabel" destination="VUI-5a-Min" id="UWJ-0s-Zgl"/>
             </connections>
         </tableViewCell>

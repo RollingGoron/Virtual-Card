@@ -16,7 +16,7 @@ class SavedCardsController: UIViewController {
     self.title = "Title"
     
     tableData = CoreDataManager.returnAllSavedCards()
-    
+    self.title = "My Network"
     savedCardsTableView.reloadData()
     self.savedCardsTableView.registerNib(UINib(nibName: "SavedCell", bundle: nil), forCellReuseIdentifier: "SavedCell")
     self.savedCardsTableView.rowHeight = 87
