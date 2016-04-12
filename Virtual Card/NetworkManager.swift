@@ -40,10 +40,9 @@ class NetworkManager: NSObject {
         
     }
     
-    func saveCardToServer(firstName  : String, lastName : String, company : String, jobTitle : String, networkCompletionBlock : NetworkCompletionBlock) -> Void {
+    func saveCardToServer(firstName  : String, lastName : String, company : String, jobTitle : String, userId : String, address : String, emailAddress : String, phoneNumber : String, networkCompletionBlock : NetworkCompletionBlock) -> Void {
         
-        let jsonDictionary = ["userId": firstName+"1", "fName" : firstName, "sName" : lastName, "companyName" : company]
-        
+        let jsonDictionary = ["userId": "\(firstName)1", "fName" : firstName, "sName" : lastName, "companyName" : company, "address1" : address, "email" : emailAddress, "phone" : phoneNumber, "designation" : jobTitle]
         
         do {
             let jsonData = try NSJSONSerialization.dataWithJSONObject(jsonDictionary, options: .PrettyPrinted)

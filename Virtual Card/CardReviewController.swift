@@ -52,16 +52,12 @@ class CardReviewController: UIViewController {
     }
     
     @IBAction func dismissController(sender: AnyObject) {
-        if self.parentViewController?.title != "Send Business Card" {
-            CoreDataManager.saveMyCardToCoreData(self.cardModel)
-            self.navigationController?.popToRootViewControllerAnimated(true)
-        } else {
-            CoreDataManager.saveReceivedCardToCoreData(self.cardModel)
-            NetworkManager.sharedInstance.saveCardToServer(self.cardModel.cardFirstName, lastName: self.cardModel.cardLastName, company: self.cardModel.cardCompany, jobTitle: self.cardModel.cardJobTitle, networkCompletionBlock: { (returnedObject, returnedString, returnedBool ) -> Void in
-                        self.navigationController?.popToRootViewControllerAnimated(true)
-                print("Returned Data: \(returnedObject) with response \(returnedString), and bool \(returnedBool)")
-            })
-        }
+        
+        CoreDataManager.saveReceivedCardToCoreData(self.cardModel)
+        NetworkManager.sharedInstance.saveCardToServer(self.cardModel.cardFirstName, lastName: self.cardModel.cardLastName, company: self.cardModel.cardCompany, jobTitle: self.cardModel.cardJobTitle, userId: self.cardModel.cardUserID, address: self.cardModel.cardAddress, emailAddress: self.cardModel.cardEmail, phoneNumber: self.cardModel.cardPhoneNumber, networkCompletionBlock: { (returnedObject, returnedString, returnedBool ) -> Void in
+            print("Returned Data: \(returnedObject) with response \(returnedString), and bool \(returnedBool)")
+        })
+
         
         
     }
