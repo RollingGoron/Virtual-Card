@@ -24,6 +24,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     self.tableView.dataSource = self
     self.tableView.tableFooterView = UIView(frame: CGRect.zero)
     self.tableView.registerNib(UINib(nibName: "HomeCell", bundle: nil), forCellReuseIdentifier: "HomeCell")
+    
   }
   
   override func viewWillAppear(animated: Bool) {

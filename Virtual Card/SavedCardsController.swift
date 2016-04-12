@@ -21,7 +21,7 @@ class SavedCardsController: UIViewController {
     self.savedCardsTableView.registerNib(UINib(nibName: "SavedCell", bundle: nil), forCellReuseIdentifier: "SavedCell")
     self.savedCardsTableView.rowHeight = 87
     self.savedCardsTableView.estimatedRowHeight = UITableViewAutomaticDimension
-    
+    self.view.backgroundColor = UIColor(red: (249.0/255.0), green: (248.0/255.0), blue: (249.0/255.0), alpha: 1.0)
     NetworkManager.sharedInstance.fetchAllCardsForAccount { (returnedObject, returnedString, returnedBool) -> Void in
       
       guard let returnedCardsArray = returnedObject["busiunessCards"] as? [Dictionary<String, String>] else {

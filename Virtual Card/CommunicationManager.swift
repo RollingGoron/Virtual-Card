@@ -10,7 +10,7 @@ import UIKit
 import MultipeerConnectivity
 
 protocol CommunicationManagerDelegate {
-  func connectionStatus(status : String)
+  func connectionStatus(state : MCSessionState)
   func didReceiveCardData(cardModel : CardModel)
 }
 
@@ -83,7 +83,7 @@ extension CommunicationManager : MCSessionDelegate {
   }
   
   func session(session: MCSession, peer peerID: MCPeerID, didChangeState state: MCSessionState) {
-    self.delegate?.connectionStatus(state.returnString())
+    self.delegate?.connectionStatus(state)
   }
   
   func session(session: MCSession, didReceiveStream stream: NSInputStream, withName streamName: String, fromPeer peerID: MCPeerID) {
@@ -124,19 +124,5 @@ extension CommunicationManager : MCNearbyServiceBrowserDelegate {
     print("Lost connection to peer \(peerID)")
   }
   
-}
-
-extension MCSessionState {
-  func returnString() -> String {
-    if self == .NotConnected {
-      return "Not connected!"
-    } else if self == .Connected {
-      return "Connected!"
-    } else if self == .Connecting {
-      return "Connecting to peer..."
-    } else {
-      return "An Error Occured"
-    }
-  }
 }
 

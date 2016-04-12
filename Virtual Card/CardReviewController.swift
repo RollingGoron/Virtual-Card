@@ -38,6 +38,7 @@ class CardReviewController: UIViewController {
         lastNameLabel.text = cardModel.cardLastName
         jobTitleLabel.text = cardModel.cardJobTitle
         companyLabel.text = cardModel.cardCompany
+      
         
         // Do any additional setup after loading the view.
     }

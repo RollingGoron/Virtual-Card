@@ -23,7 +23,7 @@ class CreateNewCardController: UIViewController, TaskCompletedProtocol {
     self.navigationController!.navigationBar.topItem!.title = ""
     self.title = "Create a new Business Card"
     createButton.layer.cornerRadius = 5
-    
+    self.view.backgroundColor = UIColor(red: (249.0/255.0), green: (248.0/255.0), blue: (249.0/255.0), alpha: 1.0)
   }
   
   func saveButtonClicked(){

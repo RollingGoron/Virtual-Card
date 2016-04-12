@@ -11,7 +11,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VUI-5a-Min">
@@ -21,9 +21,9 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sN8-Va-yMc">
-                        <rect key="frame" x="270" y="5" width="33" height="33"/>
+                        <rect key="frame" x="273" y="7" width="30" height="30"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="33" id="fWH-pR-Lqz"/>
+                            <constraint firstAttribute="width" constant="30" id="fWH-pR-Lqz"/>
                         </constraints>
                     </imageView>
                 </subviews>
@@ -32,8 +32,8 @@
                     <constraint firstItem="VUI-5a-Min" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="EbW-Yg-hNW"/>
                     <constraint firstItem="VUI-5a-Min" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="R4Q-By-f9t"/>
                     <constraint firstAttribute="trailingMargin" secondItem="sN8-Va-yMc" secondAttribute="trailing" constant="9" id="bmb-nw-db8"/>
-                    <constraint firstItem="sN8-Va-yMc" firstAttribute="leading" secondItem="VUI-5a-Min" secondAttribute="trailing" constant="8" id="jRx-mC-vYK"/>
-                    <constraint firstItem="sN8-Va-yMc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-3" id="tBe-bp-nv1"/>
+                    <constraint firstItem="sN8-Va-yMc" firstAttribute="leading" secondItem="VUI-5a-Min" secondAttribute="trailing" constant="11" id="jRx-mC-vYK"/>
+                    <constraint firstItem="sN8-Va-yMc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-1" id="tBe-bp-nv1"/>
                     <constraint firstItem="VUI-5a-Min" firstAttribute="centerY" secondItem="sN8-Va-yMc" secondAttribute="centerY" id="tx1-1Q-r35"/>
                 </constraints>
             </tableViewCellContentView>
@@ -41,6 +41,7 @@
                 <outlet property="iconImage" destination="sN8-Va-yMc" id="OH0-t3-ase"/>
                 <outlet property="tableLabel" destination="VUI-5a-Min" id="UWJ-0s-Zgl"/>
             </connections>
+            <point key="canvasLocation" x="263" y="286"/>
         </tableViewCell>
     </objects>
 </document>
