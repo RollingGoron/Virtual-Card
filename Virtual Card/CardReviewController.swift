@@ -34,11 +34,15 @@ class CardReviewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    self.title = "Title"
     self.saveButton.setTitle(buttonText, forState: .Normal)
-    let cancelButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: "cancelClicked")
-    navigationItem.leftBarButtonItem = cancelButton
     
+
+    self.imgView.image = UIImage(named: "commonLogo.jpg")
+    
+    if buttonText == "" {
+      saveButton.hidden = true
+    }
+    self.title = "Business Card"
     saveButton.layer.cornerRadius = 5
     bgView.layer.cornerRadius = 5
     bgView.layer.borderColor = UIColor.lightGrayColor().CGColor
@@ -55,34 +59,13 @@ class CardReviewController: UIViewController {
     // Do any additional setup after loading the view.
   }
   
-  func cancelClicked(){
-    dismissViewControllerAnimated(true) { () -> Void in
-      
-    };
-  }
-  
+
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
   
   @IBAction func dismissController(sender: AnyObject) {
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.title = "Title"
-        self.saveButton.setTitle(buttonText, forState: .Normal)
-        let cancelButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: "cancelClicked")
-        navigationItem.leftBarButtonItem = cancelButton
-        
-        firstNameLabel.text = cardModel.cardFirstName
-        lastNameLabel.text = cardModel.cardLastName
-        jobTitleLabel.text = cardModel.cardJobTitle
-        companyLabel.text = cardModel.cardCompany
-      
-        
-        // Do any additional setup after loading the view.
-    }
     
     if self.saveButton.titleLabel!.text == "Save My Card" {
       print("Parent is Send Business Card")

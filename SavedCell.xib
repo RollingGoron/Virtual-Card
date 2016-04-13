@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -11,10 +11,10 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="87"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="287" height="86"/>
+                <rect key="frame" x="0.0" y="0.0" width="287" height="86.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common Logo[4]" translatesAutoresizingMaskIntoConstraints="NO" id="n54-fR-ATo">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commonLogo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="n54-fR-ATo">
                         <rect key="frame" x="10" y="13" width="60" height="60"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="60" id="DhX-lI-THm"/>
@@ -39,24 +39,14 @@
                         <color key="textColor" red="0.30196078430000001" green="0.30980392159999998" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Sw-Sc-Y4T">
-                        <rect key="frame" x="10" y="85" width="310" height="1"/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="1" id="IO8-FV-0cG"/>
-                        </constraints>
-                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="rVW-Je-fQV" firstAttribute="leading" secondItem="n54-fR-ATo" secondAttribute="trailing" constant="10" id="0tp-Ve-Tk7"/>
                     <constraint firstItem="n54-fR-ATo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="2iJ-B9-NDZ"/>
-                    <constraint firstItem="7Sw-Sc-Y4T" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="2sZ-OX-Bdg"/>
                     <constraint firstAttribute="trailingMargin" secondItem="lnj-D7-PSQ" secondAttribute="trailing" constant="-3" id="3BC-8f-7EY"/>
-                    <constraint firstAttribute="trailing" secondItem="7Sw-Sc-Y4T" secondAttribute="trailing" constant="-33" id="3YU-8k-R5F"/>
                     <constraint firstItem="lnj-D7-PSQ" firstAttribute="leading" secondItem="n54-fR-ATo" secondAttribute="trailing" constant="10" id="LcB-g3-m6s"/>
                     <constraint firstAttribute="trailing" secondItem="Gag-U9-Gwe" secondAttribute="trailing" constant="5" id="Nq9-To-8yT"/>
                     <constraint firstItem="lnj-D7-PSQ" firstAttribute="top" secondItem="rVW-Je-fQV" secondAttribute="bottom" constant="3" id="SLF-At-yIJ"/>
-                    <constraint firstAttribute="bottom" secondItem="7Sw-Sc-Y4T" secondAttribute="bottom" id="Skc-bq-Luk"/>
                     <constraint firstItem="n54-fR-ATo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="cLe-Yp-Lf2"/>
                     <constraint firstItem="lnj-D7-PSQ" firstAttribute="centerY" secondItem="n54-fR-ATo" secondAttribute="centerY" constant="1.5" id="ij7-km-yoR"/>
                     <constraint firstAttribute="trailing" secondItem="rVW-Je-fQV" secondAttribute="trailing" constant="5" id="qRN-kJ-4Pz"/>
@@ -65,7 +55,7 @@
                     <constraint firstItem="Gag-U9-Gwe" firstAttribute="top" secondItem="lnj-D7-PSQ" secondAttribute="bottom" constant="3" id="ymR-Pr-VlG"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.97647058819999999" green="0.97254901959999995" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
             <connections>
                 <outlet property="avatarImage" destination="n54-fR-ATo" id="cXS-vP-9pT"/>
                 <outlet property="companyTitle" destination="rVW-Je-fQV" id="cdx-13-EF3"/>
@@ -76,6 +66,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="common Logo[4]" width="660" height="660"/>
+        <image name="commonLogo.jpg" width="660" height="660"/>
     </resources>
 </document>

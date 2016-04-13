@@ -73,7 +73,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let createCardController = self.storyboard?.instantiateViewControllerWithIdentifier("CreateNewCardController")
         self.navigationController?.pushViewController(createCardController!, animated: true)
       } else {
-        let detailCardViewController = self.storyboard?.instantiateViewControllerWithIdentifier("CardDetailViewController") as! CardDetailViewController
+        let detailCardViewController = self.storyboard?.instantiateViewControllerWithIdentifier("CardReviewController") as! CardReviewController
         detailCardViewController.cardModel = CoreDataManager.returnMyBusinessCard()
         self.navigationController?.pushViewController(detailCardViewController, animated: true)
       }

@@ -76,7 +76,7 @@ extension SavedCardsController : UITableViewDataSource, UITableViewDelegate {
   
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     let savedEntity = tableData[indexPath.row] as! SavedEntity
-    let cardDetailController = self.storyboard?.instantiateViewControllerWithIdentifier("CardDetailViewController") as! CardDetailViewController
+    let cardDetailController = self.storyboard?.instantiateViewControllerWithIdentifier("CardReviewController") as! CardReviewController
     cardDetailController.cardModel = CardModel(savedEntity: savedEntity)
     self.navigationController?.pushViewController(cardDetailController, animated: true)
     tableView.deselectRowAtIndexPath(indexPath, animated: true)

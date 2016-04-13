@@ -18,6 +18,11 @@
 		2D4015D31CA58A9500B41B6A /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4015D11CA58A9500B41B6A /* HomeCell.swift */; };
 		2D4015D41CA58A9500B41B6A /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D4015D21CA58A9500B41B6A /* HomeCell.xib */; };
 		2D4E4ACC1CBC335300896C0B /* SavedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4E4ACA1CBC335300896C0B /* SavedCell.swift */; };
+		2D86D0E91CBE9BC9008826FD /* commonLogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2D86D0E81CBE9BC9008826FD /* commonLogo.jpg */; };
+		2D86D0EB1CBE9EC8008826FD /* technology.svg in Resources */ = {isa = PBXBuildFile; fileRef = 2D86D0EA1CBE9EC8008826FD /* technology.svg */; };
+		2D86D0ED1CBEA0FA008826FD /* technology.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D86D0EC1CBEA0FA008826FD /* technology.png */; };
+		2D86D0EF1CBEA1A9008826FD /* email.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D86D0EE1CBEA1A9008826FD /* email.png */; };
+		2D86D0F11CBEA1B0008826FD /* gps.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D86D0F01CBEA1B0008826FD /* gps.png */; };
 		2DBC3A261CA2282B00EF303B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC3A251CA2282B00EF303B /* AppDelegate.swift */; };
 		2DBC3A281CA2282B00EF303B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC3A271CA2282B00EF303B /* ViewController.swift */; };
 		2DBC3A2E1CA2282B00EF303B /* Virtual_Card.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC3A2C1CA2282B00EF303B /* Virtual_Card.xcdatamodeld */; };
@@ -33,9 +38,6 @@
 		3271C03B1CBE08140069DCD1 /* SavedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3271C03A1CBE08140069DCD1 /* SavedCell.xib */; };
 		3271C03D1CBE08280069DCD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3271C03C1CBE08280069DCD1 /* Main.storyboard */; };
 		3271C03F1CBE9A3B0069DCD1 /* telephone.png in Resources */ = {isa = PBXBuildFile; fileRef = 3271C03E1CBE9A3B0069DCD1 /* telephone.png */; };
-		3271C0421CBE9AC70069DCD1 /* gps.png in Resources */ = {isa = PBXBuildFile; fileRef = 3271C0401CBE9AC70069DCD1 /* gps.png */; };
-		3271C0431CBE9AC70069DCD1 /* web.png in Resources */ = {isa = PBXBuildFile; fileRef = 3271C0411CBE9AC70069DCD1 /* web.png */; };
-		3271C0451CBE9ADE0069DCD1 /* common Logo[4].jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3271C0441CBE9ADE0069DCD1 /* common Logo[4].jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,11 @@
 		2D4015D11CA58A9500B41B6A /* HomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeCell.swift; path = "Virtual Card/HomeCell.swift"; sourceTree = "<group>"; };
 		2D4015D21CA58A9500B41B6A /* HomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeCell.xib; path = "Virtual Card/HomeCell.xib"; sourceTree = "<group>"; };
 		2D4E4ACA1CBC335300896C0B /* SavedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedCell.swift; sourceTree = "<group>"; };
+		2D86D0E81CBE9BC9008826FD /* commonLogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = commonLogo.jpg; sourceTree = "<group>"; };
+		2D86D0EA1CBE9EC8008826FD /* technology.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = technology.svg; path = ../Downloads/technology.svg; sourceTree = "<group>"; };
+		2D86D0EC1CBEA0FA008826FD /* technology.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = technology.png; path = ../Downloads/technology.png; sourceTree = "<group>"; };
+		2D86D0EE1CBEA1A9008826FD /* email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = email.png; path = ../Downloads/email.png; sourceTree = "<group>"; };
+		2D86D0F01CBEA1B0008826FD /* gps.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gps.png; path = ../Downloads/gps.png; sourceTree = "<group>"; };
 		2DBC3A221CA2282B00EF303B /* Virtual Card.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Virtual Card.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DBC3A251CA2282B00EF303B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DBC3A271CA2282B00EF303B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -89,9 +96,6 @@
 		3271C03A1CBE08140069DCD1 /* SavedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SavedCell.xib; sourceTree = "<group>"; };
 		3271C03C1CBE08280069DCD1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3271C03E1CBE9A3B0069DCD1 /* telephone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = telephone.png; sourceTree = "<group>"; };
-		3271C0401CBE9AC70069DCD1 /* gps.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gps.png; sourceTree = "<group>"; };
-		3271C0411CBE9AC70069DCD1 /* web.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = web.png; sourceTree = "<group>"; };
-		3271C0441CBE9ADE0069DCD1 /* common Logo[4].jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "common Logo[4].jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,10 +161,12 @@
 		2D4015D51CA5AAE500B41B6A /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				2D86D0EA1CBE9EC8008826FD /* technology.svg */,
+				2D86D0E81CBE9BC9008826FD /* commonLogo.jpg */,
+				2D86D0EC1CBEA0FA008826FD /* technology.png */,
 				3271C03E1CBE9A3B0069DCD1 /* telephone.png */,
-				3271C0441CBE9ADE0069DCD1 /* common Logo[4].jpg */,
-				3271C0401CBE9AC70069DCD1 /* gps.png */,
-				3271C0411CBE9AC70069DCD1 /* web.png */,
+				2D86D0EE1CBEA1A9008826FD /* email.png */,
+				2D86D0F01CBEA1B0008826FD /* gps.png */,
 				2D4015D11CA58A9500B41B6A /* HomeCell.swift */,
 				2D4015D21CA58A9500B41B6A /* HomeCell.xib */,
 				2D4E4ACA1CBC335300896C0B /* SavedCell.swift */,
@@ -331,15 +337,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3271C0431CBE9AC70069DCD1 /* web.png in Resources */,
 				3271C03F1CBE9A3B0069DCD1 /* telephone.png in Resources */,
+				2D86D0E91CBE9BC9008826FD /* commonLogo.jpg in Resources */,
 				2DBC3A331CA2282B00EF303B /* LaunchScreen.storyboard in Resources */,
+				2D86D0F11CBEA1B0008826FD /* gps.png in Resources */,
+				2D86D0EB1CBE9EC8008826FD /* technology.svg in Resources */,
 				3271C03D1CBE08280069DCD1 /* Main.storyboard in Resources */,
 				3271C03B1CBE08140069DCD1 /* SavedCell.xib in Resources */,
+				2D86D0ED1CBEA0FA008826FD /* technology.png in Resources */,
+				2D86D0EF1CBEA1A9008826FD /* email.png in Resources */,
 				2DBC3A301CA2282B00EF303B /* Assets.xcassets in Resources */,
 				2D4015D41CA58A9500B41B6A /* HomeCell.xib in Resources */,
-				3271C0421CBE9AC70069DCD1 /* gps.png in Resources */,
-				3271C0451CBE9ADE0069DCD1 /* common Logo[4].jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
