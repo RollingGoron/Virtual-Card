@@ -363,12 +363,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KLj-8k-0tZ">
-                                <rect key="frame" x="20" y="49" width="560" height="229.5"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KLj-8k-0tZ">
+                                <rect key="frame" x="20" y="49" width="560" height="223.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yY2-2D-0Qg">
                                         <rect key="frame" x="0.0" y="70" width="560" height="1"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="tTC-oV-A3v"/>
                                         </constraints>
@@ -427,6 +427,16 @@
                                             <constraint firstAttribute="width" constant="144" id="IcT-lp-cCL"/>
                                         </constraints>
                                     </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="telephone" translatesAutoresizingMaskIntoConstraints="NO" id="XMV-lH-PK4">
+                                        <rect key="frame" x="259" y="105" width="21" height="18"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="21" id="2s2-sG-pyG"/>
+                                            <constraint firstAttribute="height" constant="18" id="UvR-b6-Vup"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="web" translatesAutoresizingMaskIntoConstraints="NO" id="qey-cb-par">
+                                        <rect key="frame" x="259" y="139" width="21" height="21"/>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="gJp-FV-lqD" firstAttribute="leading" secondItem="KLj-8k-0tZ" secondAttribute="leading" constant="8" id="14y-RR-a2u"/>
@@ -439,6 +449,7 @@
                                     <constraint firstAttribute="bottom" secondItem="v5b-gW-EzO" secondAttribute="bottom" constant="34" id="PE0-Tt-7N1"/>
                                     <constraint firstAttribute="trailing" secondItem="4PF-DH-9sO" secondAttribute="trailing" constant="9" id="USy-SC-Qt1"/>
                                     <constraint firstAttribute="trailing" secondItem="KuI-Ky-6YM" secondAttribute="trailing" constant="9" id="Ugf-LU-DJk"/>
+                                    <constraint firstItem="4PF-DH-9sO" firstAttribute="leading" secondItem="XMV-lH-PK4" secondAttribute="trailing" constant="5" id="VqX-eV-eJL"/>
                                     <constraint firstItem="vOI-aD-z2g" firstAttribute="top" secondItem="KLj-8k-0tZ" secondAttribute="top" id="XxE-a3-TZv"/>
                                     <constraint firstItem="yY2-2D-0Qg" firstAttribute="top" secondItem="KLj-8k-0tZ" secondAttribute="top" constant="70" id="Zqq-cj-mcs"/>
                                     <constraint firstItem="vOI-aD-z2g" firstAttribute="leading" secondItem="KLj-8k-0tZ" secondAttribute="leading" constant="8" id="bdS-J2-FYQ"/>
@@ -470,6 +481,7 @@
                         <outlet property="jobTitleLabel" destination="gJp-FV-lqD" id="ATK-HL-Jfn"/>
                         <outlet property="nameLabel" destination="d4h-sL-bOw" id="dAa-fb-b1L"/>
                         <outlet property="phoneNoLabel" destination="4PF-DH-9sO" id="d3p-cB-yf5"/>
+                        <outlet property="telephoneImg" destination="XMV-lH-PK4" id="aIa-GS-dq5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j7O-37-0HL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -479,5 +491,7 @@
     </scenes>
     <resources>
         <image name="common Logo[4]" width="660" height="660"/>
+        <image name="telephone" width="512" height="512"/>
+        <image name="web" width="512" height="512"/>
     </resources>
 </document>
