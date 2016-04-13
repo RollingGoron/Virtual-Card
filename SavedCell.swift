@@ -9,24 +9,24 @@
 import UIKit
 
 class SavedCell: UITableViewCell {
-
-    @IBOutlet weak var companyTitle: UILabel!
-    @IBOutlet weak var firstNameLabel: UILabel!
-    @IBOutlet weak var lastNameLabel: UILabel!
-    @IBOutlet weak var jobTitleLabel: UILabel!
+  
+  @IBOutlet weak var companyTitle: UILabel!
+  @IBOutlet weak var nameLabel: UILabel!
+  //@IBOutlet weak var lastNameLabel: UILabel!
+  @IBOutlet weak var jobTitleLabel: UILabel!
+  
+  @IBOutlet weak var avatarImage: UIImageView!
+  
+  
+  override func awakeFromNib() {
+    super.awakeFromNib()
+    // Initialization code
+  }
+  
+  override func setSelected(selected: Bool, animated: Bool) {
+    super.setSelected(selected, animated: animated)
     
-    @IBOutlet weak var avatarImage: UIImageView!
-    
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
+    // Configure the view for the selected state
+  }
+  
 }

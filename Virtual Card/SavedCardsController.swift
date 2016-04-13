@@ -64,9 +64,8 @@ extension SavedCardsController : UITableViewDataSource, UITableViewDelegate {
     print("Saved Entity \(savedEntity.phoneNumber)")
     
     let cell = tableView.dequeueReusableCellWithIdentifier("SavedCell") as! SavedCell
-    
-    cell.firstNameLabel.text = savedEntity.firstName
-    cell.lastNameLabel.text = savedEntity.lastName
+    let name = String(format: "%@ %@", savedEntity.firstName!,savedEntity.lastName!)
+    cell.nameLabel.text = name
     cell.jobTitleLabel.text = savedEntity.jobTitle
     cell.companyTitle.text = savedEntity.company
     
@@ -79,25 +78,26 @@ extension SavedCardsController : UITableViewDataSource, UITableViewDelegate {
     let cardDetailController = self.storyboard?.instantiateViewControllerWithIdentifier("CardDetailViewController") as! CardDetailViewController
     cardDetailController.cardModel = CardModel(savedEntity: savedEntity)
     self.navigationController?.pushViewController(cardDetailController, animated: true)
+    tableView.deselectRowAtIndexPath(indexPath, animated: true)
   }
+  
+  func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+    return true
+  }
+  
+  func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
     
-    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return true
-    }
+    let savedEntity = tableData[indexPath.row] as! SavedEntity
+    print("UserID = \(savedEntity.userID)")
     
-    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        
-        let savedEntity = tableData[indexPath.row] as! SavedEntity
-        print("UserID = \(savedEntity.userID)")
-        
-        if editingStyle == .Delete {
-            NetworkManager.sharedInstance.deleteCardFromAccount(savedEntity) { (returnedData, returnedString, returnedBool) -> Void in
-                print("Deleted Item!")
-            }
-            self.tableData.removeObjectAtIndex(indexPath.row)
-            self.savedCardsTableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-            CoreDataManager.removeSavedItemFromCoreData(savedEntity)
-        }
+    if editingStyle == .Delete {
+      NetworkManager.sharedInstance.deleteCardFromAccount(savedEntity) { (returnedData, returnedString, returnedBool) -> Void in
+        print("Deleted Item!")
+      }
+      self.tableData.removeObjectAtIndex(indexPath.row)
+      self.savedCardsTableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+      CoreDataManager.removeSavedItemFromCoreData(savedEntity)
     }
-
+  }
+  
 }
