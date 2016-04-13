@@ -19,6 +19,7 @@ class CardDetailViewController: UIViewController {
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var imgView:UIImageView!
+  @IBOutlet weak var telephoneImg:UIImageView!
   
   
     var cardModel : CardModel!

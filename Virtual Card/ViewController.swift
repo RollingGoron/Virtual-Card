@@ -12,14 +12,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   
   @IBOutlet weak var tableView: UITableView!
   
-    
+  
   var tableData = [String]()
-
+  
   
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    self.title = "Title"    
+    self.title = "Title"
     self.tableView.delegate = self
     self.tableView.dataSource = self
     self.tableView.tableFooterView = UIView(frame: CGRect.zero)
@@ -54,7 +54,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     if indexPath.row == 0 {
-    cell.iconImage.image = UIImage(named: "createIcon")
+      cell.iconImage.image = UIImage(named: "createIcon")
     } else if indexPath.row == 1 {
       cell.iconImage.image = UIImage(named: "listIcon")
     } else if indexPath.row == 2 {
@@ -86,6 +86,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
       let sendReceiveCardController = self.storyboard?.instantiateViewControllerWithIdentifier("SendReceiveController")
       self.navigationController?.pushViewController(sendReceiveCardController!, animated: true)
     }
+    self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: self, action: nil);
     self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
   }
   
